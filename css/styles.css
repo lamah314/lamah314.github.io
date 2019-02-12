@@ -30,7 +30,7 @@ figure {
 }
 
 figcaption {
-    bottom: .05;
+    bottom: .8rem;
     color: white;
     position: absolute;
     width: 100%;
