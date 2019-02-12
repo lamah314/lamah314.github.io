@@ -1,3 +1,20 @@
-ul li{
+
+h1 {
+    text-align: center;
+}
+
+#pageIntro {
+    text-align: center;
+}
+
+#aboutMe {
+    text-align: center;
+}
+
+#techInv ul {
+    list-style-type: none; 
+}
+
+#techInv ul li{
     text-align: center;
 }
