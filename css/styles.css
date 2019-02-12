@@ -10,7 +10,7 @@ img {
 
 figure {
     position: relative;
-    width: 200px;
+    width: 50px;
 }
 
 figcaption {
@@ -30,8 +30,8 @@ figcaption {
     text-align: center;
 }
 
-#techInv{
-    text-align: center; 
+#techInv {
+    text-align: center;
 }
 
 #techInv ul {
