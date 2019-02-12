@@ -1,3 +1,13 @@
+body {
+    color : lime;
+    text-shadow: 3px 2px green;
+    background-color: black;
+}
+
+
+
+
+
 h1 {
     text-align: center;
     color: lime;
@@ -10,7 +20,7 @@ img {
 
 figure {
     position: relative;
-    width: 50px;
+    width: 300px;
 }
 
 figcaption {
@@ -26,8 +36,9 @@ figcaption {
     text-align: center;
 }
 
-#aboutMe {
-    text-align: center;
+.aboutMeSection {
+    border: 5px;
+    border-color: 
 }
 
 #techInv {
@@ -36,8 +47,4 @@ figcaption {
 
 #techInv ul {
     list-style-type: none;
-}
-
-#techInv ul li {
-    text-align: center;
 }
