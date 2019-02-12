@@ -1,5 +1,3 @@
-ul {
-    columns: 4;
-    -webkit-columns: 4;
-    -moz-columns: 4;
+ul li{
+    text-align: center;
 }
