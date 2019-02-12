@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.center:hover {
+  
+}
+
 h1 {
     text-align: center;
     text-shadow: 2px 3px green;
@@ -39,8 +43,16 @@ figcaption {
 }
 
 .aboutMeSection {
-    border: 10px;
-    border-color: white;
+    border: 2px;
+    border-color: purple;
+    border-style: solid;
+    width: 62%;
+/* center about me section   */
+  /************/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  /************/
 }
 
 h2 {
