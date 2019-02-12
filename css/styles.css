@@ -17,6 +17,10 @@ img {
     text-align: center;
 }
 
+#techInv{
+    text-align: center; 
+}
+
 #techInv ul {
     list-style-type: none;
 }
