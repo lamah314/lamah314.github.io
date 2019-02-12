@@ -1,0 +1,135 @@
+:root {
+	--black: #666;
+	--blue: #429fd7;
+	--green: #5dbb46;
+	--orange: #f26722;
+	--pink: #da2368;
+	--white: #fefefe;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+	color: var(--green);
+}
+article {
+	padding: 0 0 0.47rem;
+	margin-bottom: .97rem;
+	border-bottom: 1px solid var(--white);
+}
+body {
+	color: var(--black);
+	font: 16px/1.5 'Raleway', sans-serif;
+}
+footer {
+	border-top: 1px solid var(--white);
+	text-align: center;
+	padding: 2rem 0 1.5rem;
+}
+figure {
+	margin: 0;
+}
+h1,
+h2 {
+	color: var(--blue);
+	margin: .53rem 0 0 .13rem;
+}
+h3 {
+	color: var(--pink);
+}
+header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+	header > img {
+		margin-left: 1rem;
+		max-width: 377px;
+	}
+	header > nav {
+		margin-right: 1rem;
+	}
+input {
+	border: none;
+	border-radius: .3rem;
+	outline: none;
+	padding: .53rem .97rem;
+}
+input[type='submit'] {
+	color: var(--white);
+	background: var(--blue);
+}
+input[type='text'] {
+	flex: 1 1 auto;
+	margin-right: 4px;
+	border: 1px solid var(--black);
+}
+main ul {
+	padding: 0;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+	padding: 0;
+}
+	nav li {
+		margin: 0 0.47em;
+	}
+		nav a {
+			display: block;
+			font-size: 0.97rem;
+		}
+
+.container {
+	display: grid;
+	grid-template-rows: 100px auto auto 100px;
+	margin: auto;
+	max-width: 50em;
+	width: 90%;
+}
+.subscribe-input {
+	display: flex;
+	width: 100%;
+}
+.headImage {
+	max-width: 100%;
+	margin-bottom: .97rem;
+}
+.mainContent {
+	display: flex;
+	justify-content: space-around;
+}
+
+@media (max-width: 575px) {
+	header {
+		flex-direction: column;
+		justify-content: center;
+	}
+		header img {
+			margin-bottom: 10px;
+		}
+	nav ul {
+		flex-direction: column;
+		margin: 0;
+	}
+		nav li {
+			margin-bottom: 5px;
+		}
+
+	.container {
+		grid-template-rows: 200px auto auto 100px
+	}
+	.mainContent {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	.subjectMaterialList {
+		text-align: center;
+	}
+		.subjectMaterialList ul {
+			list-style-type: none;
+		}
+	.subscribe {
+		text-align: center;
+	}
+}
