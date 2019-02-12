@@ -5,9 +5,22 @@ h1 {
 
 img {
     width: 100%;
-    height: 100%;
+    height: auto;
 }
 
+figure {
+    position: relative;
+    width: 200px;
+}
+
+figcaption {
+    bottom: .05;
+    color: white;
+    position: absolute;
+    width: 100%;
+    opacity: 0.4;
+    text-align: center;
+}
 
 #pageIntro {
     text-align: center;
