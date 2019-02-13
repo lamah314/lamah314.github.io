@@ -1,120 +1,143 @@
 * {
-    color:lime;
+    color: lime;
     background-color: black;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  html {
+}
+
+html {
     font: 20px/1.618;
     font-family: "Lato", sans-serif;
-  }
-  
-  .container {
-    display:flex;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
     width: 95%;
-  }
-  
-  .sidenav {
+}
+
+.sidenav {
     width: 200px;
     position: fixed;
     z-index: 1;
     top: 20px;
     left: 10px;
     overflow-x: hidden;
-    padding: 8px 0;
-    border: 3px solid purple;
-  }
-  
-  .sidenav a{
+    padding: 8px 8px;
+    border: 3px solid rgb(153, 47, 153);
+}
+
+.sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1rem;
     color: #2196F3;
     display: block;
-  }
-  
-  .sidenav p {
-    font-size: 21px;
+}
+
+.sidenav p {
+    font-size: 1rem;
+    display: block;
     margin-bottom: 0;
-  }
-  
-  .sidenav a:hover {
+}
+
+.sidenav a:hover {
     color: #064579;
-  }
-  
-  .main {
+}
+
+.sidenav-list {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: cyan;
+    display: block;
+}
+
+.main {
     display: flex;
     flex-direction: column;
-    margin-left: 200px; /* Same width as the sidebar + left position in px */
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  
-  .main h1 {
-      text-align: center;
-      text-shadow: 2px 3px green;
-  }
-  
-  .main h2, .main h3, .main h4 {
-      text-align: center;
-      text-shadow: 1px 2px green;
-  }
-  
-  .main h1:hover, h2:hover, h3:hover, h4:hover {
-      color: red;
-      animation: blinker 1s linear infinite;
-  }
-  
-  @keyframes blinker {
-      50% {
-          opacity: 0;
-      }
-  }
-  
-  img {
-      width: 100%;
-      height: auto;
-  }
-  
-  figure {
-      position: relative;
-      width: 300px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  }
-  
-  figcaption {
-      bottom: .8rem;
-      left: 3rem;
-      color: white;
-      position: absolute;
-      width: 100%;
-      opacity: 0.4;
-      text-align: center;
-  }
-  
-  .aboutMeSection {
-      border: 2px;
-      border-color: purple;
-      border-style: solid;
-      width: 62%;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-  
-  }
-  
-  #techInv {
-      text-align: center;
-  }
-  
-  ul {
-      list-style-type: none;
-  }
+    margin-left: 200px;
+    /* Same width as the sidebar + left position in px */
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.main h1 {
+    text-align: center;
+    text-shadow: 2px 3px green;
+}
+
+.main h2, .main h3, .main h4 {
+    text-align: center;
+    text-shadow: 1px 2px green;
+}
+
+.main h1:hover, h2:hover, h3:hover, h4:hover {
+    color: red;
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+footer small {
+    color: darkblue;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    position: relative;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+figcaption {
+    background-color: transparent;
+    bottom: .8rem;
+    left: 3rem;
+    color: white;
+    position: absolute;
+    width: 100%;
+    opacity: 0.1;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.aboutMeSection {
+    border: 2px;
+    border-color: rgb(153, 47, 153);
+    border-style: solid;
+    width: 62%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#techInv {
+    text-align: center;
+}
+
+#pageIntro {
+    text-align: center;
+}
