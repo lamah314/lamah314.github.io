@@ -8,8 +8,8 @@ body {
 }
 
 .center:hover {
-  color: red;
-  animation: blinker 1s linear infinite;
+    color: red;
+    animation: blinker 1s linear infinite;
 }
 
 h1 {
@@ -17,20 +17,20 @@ h1 {
     text-shadow: 2px 3px green;
 }
 
-h2, h3 {
+h2, h3, h4 {
     text-align: center;
     text-shadow: 1px 2px green;
 }
 
-h1:hover, h2:hover, h3:hover {
-  color: red;
-  animation: blinker 1s linear infinite;
+h1:hover, h2:hover, h3:hover, h4:hover {
+    color: red;
+    animation: blinker 1s linear infinite;
 }
 
 @keyframes blinker {
-  50% {
-    opacity: 0;
-  }
+    50% {
+        opacity: 0;
+    }
 }
 
 img {
@@ -56,6 +56,10 @@ figcaption {
     text-align: center;
 }
 
+#Profiles {
+    text-align: center;
+}
+
 #pageIntro {
     text-align: center;
 }
@@ -65,13 +69,12 @@ figcaption {
     border-color: purple;
     border-style: solid;
     width: 62%;
-  
-/* center about me section   */
-  /************/
+    /* center about me section   */
+    /************/
     display: block;
     margin-left: auto;
     margin-right: auto;
-  /************/
+    /************/
 }
 
 #techInv {
