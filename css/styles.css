@@ -1,123 +1,120 @@
-body {
-    color: lime;
+* {
+    color:lime;
     background-color: black;
-}
-
-.center {
-    text-align: center;
-}
-
-.center:hover {
-    color: red;
-    animation: blinker 1s linear infinite;
-}
-
-h1 {
-    text-align: center;
-    text-shadow: 2px 3px green;
-}
-
-h2, h3, h4 {
-    text-align: center;
-    text-shadow: 1px 2px green;
-}
-
-h1:hover, h2:hover, h3:hover, h4:hover {
-    color: red;
-    animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
-img {
-    width: 100%;
-    height: auto;
-}
-
-figure {
-    position: relative;
-    width: 300px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-figcaption {
-    bottom: .8rem;
-    left: 3rem;
-    color: white;
-    position: absolute;
-    width: 100%;
-    opacity: 0.4;
-    text-align: center;
-}
-
-#Profiles {
-    text-align: center;
-}
-
-#pageIntro {
-    text-align: center;
-}
-
-.aboutMeSection {
-    border: 2px;
-    border-color: purple;
-    border-style: solid;
-    width: 62%;
-    /* center about me section   */
-    /************/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    /************/
-}
-
-#techInv {
-    text-align: center;
-}
-
-ul {
-    list-style-type: none;
-}
-
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
   
-  /* The navigation menu links */
-  .sidenav a {
+  html {
+    font: 20px/1.618;
+    font-family: "Lato", sans-serif;
+  }
+  
+  .container {
+    display:flex;
+    margin: 0 auto;
+    width: 95%;
+  }
+  
+  .sidenav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border: 
+  }
+  
+  .sidenav a{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
-    color: #818181;
+    font-size: 20px;
+    color: #2196F3;
     display: block;
   }
   
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
-    color: #f1f1f1;
+  .sidenav p {
+    font-size: 21px;
+    margin-bottom: 0;
   }
-
+  
+  .sidenav a:hover {
+    color: #064579;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 200px; /* Same width as the sidebar + left position in px */
+  }
+  
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
-  /* Style page content */
-.main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+  
+  .main h1 {
+      text-align: center;
+      text-shadow: 2px 3px green;
+  }
+  
+  .main h2, .main h3, .main h4 {
+      text-align: center;
+      text-shadow: 1px 2px green;
+  }
+  
+  .main h1:hover, h2:hover, h3:hover, h4:hover {
+      color: red;
+      animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+      50% {
+          opacity: 0;
+      }
+  }
+  
+  img {
+      width: 100%;
+      height: auto;
+  }
+  
+  figure {
+      position: relative;
+      width: 300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+  
+  figcaption {
+      bottom: .8rem;
+      left: 3rem;
+      color: white;
+      position: absolute;
+      width: 100%;
+      opacity: 0.4;
+      text-align: center;
+  }
+  
+  .aboutMeSection {
+      border: 2px;
+      border-color: purple;
+      border-style: solid;
+      width: 62%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  
+  }
+  
+  #techInv {
+      text-align: center;
+  }
+  
+  ul {
+      list-style-type: none;
   }
