@@ -123,7 +123,11 @@ ul {
 }
 
 .blurryText {
-    filter: blur(1px);
+    filter: blur(1.1px);
+}
+
+.slightlyBlurry {
+    filter: blur(.55px);
 }
 
 .public-private {
@@ -137,7 +141,11 @@ ul {
 
 .importantText {
     color:lime;
-    font-size: 110%;
+    font-size: 106%;
+}
+
+.class {
+    color: #CC0099;
 }
 
 .slightlyEnlarge {
@@ -166,5 +174,9 @@ ul {
 
 .bold {
     font-weight: bold;
+}
+
+.fa-linkedin-square:before{
+    content:"\f08c"
 }
 
