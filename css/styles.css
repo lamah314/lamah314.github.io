@@ -62,7 +62,7 @@ html {
 .main {
     display: flex;
     flex-direction: column;
-    margin-left: 200px;
+    /*margin-left: 200px;*/
     /* Same width as the sidebar + left position in px */
 }
 
@@ -76,7 +76,6 @@ html {
 }
 
 .main h1:hover, h2:hover, h3:hover, h4:hover {
-    color: red;
     animation: blinker 1s linear infinite;
 }
 
@@ -101,6 +100,7 @@ figure {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    float: right;
 }
 
 figcaption {
