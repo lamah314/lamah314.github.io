@@ -19,7 +19,7 @@ html {
     flex-direction: column;
     margin: 0 auto;
     width: 95%;
-    margin-top: 5px;
+    margin-top: 1rem;
 }
 
 .sidenav {
@@ -97,7 +97,7 @@ img {
 
 figure {
     position: relative;
-    width: 300px;
+    width: 200px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -137,11 +137,11 @@ ul {
 
 .importantText {
     color:lime;
-    font-size: 105%;
+    font-size: 110%;
 }
 
 .slightlyEnlarge {
-    font-size: 115%;
+    font-size: 120%;
 }
 
 .symbols {
