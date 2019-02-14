@@ -1,14 +1,17 @@
 * {
     color: lime;
-    background-color: black;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    background-color: black;
+}
+
 html {
     font: 20px/1.618;
-    font-family: "Lato", sans-serif;
+    font-family: "Courier New", Courier, monospace;
 }
 
 .container {
@@ -16,6 +19,7 @@ html {
     flex-direction: column;
     margin: 0 auto;
     width: 95%;
+    margin-top: 5px;
 }
 
 .sidenav {
@@ -71,16 +75,6 @@ html {
     }
 }
 
-.main h1 {
-    text-align: center;
-    text-shadow: 2px 3px green;
-}
-
-.main h2, .main h3, .main h4 {
-    text-align: center;
-    text-shadow: 1px 2px green;
-}
-
 .main h1:hover, h2:hover, h3:hover, h4:hover {
     color: red;
     animation: blinker 1s linear infinite;
@@ -112,7 +106,7 @@ figure {
 figcaption {
     background-color: transparent;
     bottom: .8rem;
-    left: 3rem;
+    left: 3.14rem;
     color: white;
     position: absolute;
     width: 100%;
@@ -125,19 +119,52 @@ ul {
 }
 
 .aboutMeSection {
-    border: 2px;
-    border-color: rgb(153, 47, 153);
-    border-style: solid;
-    width: 62%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 3.14rem;
 }
 
-#techInv {
-    text-align: center;
+.blurryText {
+    filter: blur(1px);
 }
 
-#pageIntro {
-    text-align: center;
+.public-private {
+    color: #FF007F;
 }
+
+.string {
+    
+    color: #0080FF;
+}
+
+.importantText {
+    color:lime;
+    font-size: 105%;
+}
+
+.slightlyEnlarge {
+    font-size: 115%;
+}
+
+.symbols {
+    color: white;
+}
+
+.variables {
+    color: #52E3F6;
+}
+
+.methods{
+    color: green;
+}
+
+.arguments {
+    color: #B83A1B;
+}
+
+.indent-one {
+    margin-left: 3.14rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
