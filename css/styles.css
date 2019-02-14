@@ -9,6 +9,14 @@ body {
     background-color: black;
 }
 
+    {
+    background-image: url("../images/darkScreen.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
 html {
     font: 20px/1.618;
     font-family: "Courier New", Courier, monospace;
@@ -22,41 +30,52 @@ html {
     margin-top: 1rem;
 }
 
-.sidenav {
-    width: 200px;
+#myVideo {
     position: fixed;
-    z-index: 1;
-    top: 20px;
-    left: 10px;
-    overflow-x: hidden;
-    padding: 8px 8px;
-    border: 3px solid rgb(153, 47, 153);
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
 
-.sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: #2196F3;
-    display: block;
+.gridIntroColumn {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+    grid-auto-rows: minmax(1px, auto);
+    grid-auto-columns: minmax(1px, auto);
 }
 
-.sidenav p {
-    font-size: 1rem;
-    display: block;
-    margin-bottom: 0;
+.gridIntroColumn .grid-item-2 {
+    text-align: left;
+    margin-right: 3px;
 }
 
-.sidenav a:hover {
-    color: #064579;
+.gridIntroColumn .grid-item-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
-.sidenav-list {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 1rem;
-    color: cyan;
-    display: block;
+.gridIntroColumn .grid-item-4 {
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-tech {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 100%;
+    grid-auto-columns: minmax(1px, auto);
+}
+
+.grid-tech .grid-item-2 {
+    margin-left: 3px;
 }
 
 .main {
@@ -64,15 +83,6 @@ html {
     flex-direction: column;
     /*margin-left: 200px;*/
     /* Same width as the sidebar + left position in px */
-}
-
-@media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
 }
 
 .main h1:hover, h2:hover, h3:hover, h4:hover {
@@ -89,28 +99,31 @@ footer small {
     color: darkblue;
 }
 
-img {
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    animation: blinker 1s linear infinite;
+}
+
+#myPhoto img {
     width: 100%;
     height: auto;
 }
 
-figure {
-    position: relative;
-    width: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    float: right;
+#myPhoto {
+    width: 196px;
 }
 
-figcaption {
+#myPhoto__cap {
     background-color: transparent;
-    bottom: .8rem;
+    bottom: 3.14rem;
     left: 3.14rem;
     color: white;
-    position: absolute;
+    position: relative;
     width: 100%;
-    opacity: 0.1;
+    opacity: 0.123456789;
     text-align: center;
 }
 
@@ -118,16 +131,16 @@ ul {
     list-style-type: none;
 }
 
-.aboutMeSection {
-    margin-left: 3.14rem;
-}
-
 .blurryText {
-    filter: blur(1.1px);
+    filter: blur(1.6180339887px);
 }
 
 .slightlyBlurry {
-    filter: blur(.55px);
+    filter: blur(.38196601125px);
+}
+
+.middleBlurry {
+    filter: blur(1px);
 }
 
 .public-private {
@@ -135,12 +148,11 @@ ul {
 }
 
 .string {
-    
     color: #0080FF;
 }
 
 .importantText {
-    color:lime;
+    color: lime;
     font-size: 106%;
 }
 
@@ -160,7 +172,7 @@ ul {
     color: #52E3F6;
 }
 
-.methods{
+.methods {
     color: green;
 }
 
@@ -180,7 +192,60 @@ ul {
     font-weight: bold;
 }
 
-.fa-linkedin-square:before{
-    content:"\f08c"
+@media screen and (max-width: 1105px) {
+    .topTitle {
+        text-align: justify;
+        text-align-last: right;
+        width: 100%;
+    }
 }
 
+.hero-image {
+    align-items: center;
+    background-image: url("../images/ikigaiEdit.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 125vh;
+    width: 95%;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.hero-image__title {
+    color: White;
+    margin-bottom: 3.14159rem;
+    margin-left: 1rem;
+}
+
+.main-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.main-header__title {
+    color: #fff;
+    margin-left: 1rem;
+}
+
+.nav--margin-right {
+    margin-right: 1rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__list-item {
+    margin-right: 1rem;
+}
+
+.nav__list-item:last-child {
+    margin-right: 0;
+}

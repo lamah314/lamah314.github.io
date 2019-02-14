@@ -8,114 +8,118 @@
 </head>
 
 <body>
+    <header class="main-header">
+        <h1 class="main-header__title">Anthony Lam</h1>
+        <nav class="nav nav--margin-right">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="#home">Home</a></li>
+                <li class="nav__list-item"><a href="#aboutMeSection">About</a></li>
+                <li class="nav__list-item"><a href="#projectSection">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="container">
-        <!--
-            <div class="sidenav">
-            <p>Sections</p>
-            <a href="#aboutMeSection">About Me</a>
-            <a href="#projectSection">Projects</a>
-
-            <p>Extra</p>
-            <a href="https://docs.google.com/document/d/15gPK9S2VMoWqlK2Irp7geDuPgql31raFzqcG0b0eB6w/edit?usp=sharing"
-                target="_blank">My Resume</a>
-            <a href="https://github.com/lamah314">GitHub</a>
-
-            <div id="Contact Info">
-                <p>Contact Info</p>
-
-                <p class="sidenav-list"> Phone Number: (317)430-4762</p>
-                <a href="mailto:lamah314@gmail.com">lamah314@gmail.com</a>
-
-                <a href="https://www.linkedin.com/in/lamah/">LinkedIn</a>
-
-            </div>
-
-        </div>
-    -->
-
+        <section class="hero-image">
+            <h2 class="hero-image__title">Coding</h2>
+        </section>
         <div class="main">
             <div>
-
-                <h3><span class="blurryText public-private">public class</span>
+                <h3 id="home" class="topTitle"><span class="blurryText public-private">public class</span>
                     <span class="importantText">
                         Anthony_Lam</span>
                     <span class="blurryText public-private">extends</span>
                     <span class="importantText">Full_Stack_Software_Developer</span>
                     <span class="blurryText public-private">implements</span>
-                    <span class="blurryText">codingInter</span><span class="slightlyBlurry">face</span>
+                    <span class="blurryText">codingInter</span><span class="middleBlurry">face</span>
                     <span class="blurryText symbols">{</span></h3>
-                <figure id="myPhoto">
-                    <img src="images/my photo.jpg" alt="My photo">
-                    <figcaption>Adorable</figcaption>
-                </figure>
+
                 <article>
                     <p>
                         <div class="indent-one">
                             <br>
-                            <span class="blurryText public-private">private</span>
-                            <span class="blurryText string">String</span>
-                            <span class="blurryText variables">intro</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"</span><span class="importantText">Hello World! This
-                                is my
-                                super awesome web page where
-                                you can learn about me and find some of my projects!</span><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">;</span><br />
+                            <div class="gridIntroColumn">
+                                <div class="grid-item grid-item-1">
+                                    <span class="blurryText public-private">private</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="blurryText variables">intro</span>
+                                    <span class="blurryText symbols">=</span>
+                                    <span class="importantText blurryText">"</span>
+                                </div>
+                                <div class="grid-item grid-item-2">
+                                    <span class="importantText">Hello World! This is my super awesome web page where
+                                        you can learn about me and find some of my projects!</span><span
+                                        class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
+                                </div>
+                                <figure id="myPhoto" class="grid-item grid-item-3">
+                                    <img src="images/my photo.jpg" alt="My photo">
+                                    <figcaption id="myPhoto__cap">Handsome</figcaption>
+                                </figure>
 
-                            <span class="blurryText public-private">private</span>
-                            <span class="blurryText string">List</span><span class="blurryText symbols">&lt</span><span
-                                class="blurryText arguments">String</span><span class="blurryText symbols">&gt</span>
-                            <span class="blurryText variables">skills</span><span
-                                class="blurryText symbols">;</span><br />
-                        </div>
-                        <div class="indent-one">
-                            <br>
-                            <span class="slightlyBlurry symbols">//Contact Info</span><br />
-                            <span class="blurryText public-private">private final</span>
-                            <span class="blurryText string">String</span>
-                            <span class="slightlyBlurry variables">PHONE_NUMBER</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"</span><span
-                                class="importantText">317-430-4762</span><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">;</span><br />
+                                <div class="grid-item grid-item-4">
+                                    <span class="blurryText public-private">private</span>
+                                    <span class="blurryText string">List</span><span
+                                        class="blurryText symbols">&lt</span><span
+                                        class="blurryText arguments">String</span><span
+                                        class="blurryText symbols">&gt</span>
+                                    <span class="blurryText variables">skills</span><span
+                                        class="blurryText symbols">;</span><br />
 
-                            <span class="blurryText public-private">private final</span>
-                            <span class="blurryText string">String</span>
-                            <span class="slightlyBlurry variables">EMAIL</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"</span><a class="importantText"
-                                href="mailto:lamah314@gmail.com">lamah314@gmail.com</a><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">;</span><br />
+                                    <br>
+                                    <span class="symbols indent-two">//Contact Info</span><br />
 
-                            <span class="blurryText public-private">private final</span>
-                            <span class="blurryText string">String</span>
-                            <span class="slightlyBlurry variables">LINKEDIN</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"\</span><i class="fa fa-linkedin-square"></i>
-                            <a class="importantText"
-                                href="https://www.linkedin.com/in/lamah/">www.linkedin.com/in/lamah</a><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">;</span><br />
-                        </div>
-                        <div class="indent-one">
-                            <br>
-                            <span class="slightlyBlurry symbols">//Other Resources</span><br />
-                            <span class="blurryText public-private">private</span>
-                            <span class="blurryText string">String</span>
-                            <span class="slightlyBlurry variables">resume</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"</span><a class="importantText"
-                                href="https://docs.google.com/document/d/15gPK9S2VMoWqlK2Irp7geDuPgql31raFzqcG0b0eB6w/edit?usp=sharing">My
-                                Resume</a><span class="importantText blurryText">"</span><span
-                                class="blurryText symbols">;</span><br />
+                                    <span class="blurryText public-private">private final</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="slightlyBlurry variables">PHONE_NUMBER</span>
+                                    <span class="middleBlurry symbols">=</span>
+                                    <span class="importantText blurryText">"</span><span
+                                        class="importantText">317-430-4762</span><span
+                                        class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
 
-                            <span class="blurryText public-private">private</span>
-                            <span class="blurryText string">String</span>
-                            <span class="slightlyBlurry variables">gitHub</span>
-                            <span class="blurryText symbols">=</span>
-                            <span class="importantText blurryText">"\</span><i class="fa fa-github"></i>
-                            <a class="importantText" href="https://github.com/lamah314">GitHub</a><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">;</span><br />
-                        </div>
+                                    <span class="blurryText public-private">private final</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="slightlyBlurry variables">EMAIL</span>
+                                    <span class="middleBlurry symbols">=</span>
+                                    <span class="importantText blurryText">"</span><a class="importantText"
+                                        href="mailto:lamah314@gmail.com" target="_blank">lamah314@gmail.com</a><span
+                                        class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
+
+                                    <span class="blurryText public-private">private final</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="slightlyBlurry variables">LINKEDIN</span>
+                                    <span class="middleBlurry symbols">=</span>
+                                    <span class="importantText blurryText">"\</span><i
+                                        class="fa fa-linkedin-square"></i>
+                                    <a class="importantText" href="https://www.linkedin.com/in/lamah/"
+                                        target="_blank">www.linkedin.com/in/lamah</a><span
+                                        class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
+
+                                    <br>
+                                    <span class="symbols indent-two">//Other Resource Links</span><br />
+
+                                    <span class="blurryText public-private">private</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="slightlyBlurry variables">resume</span>
+                                    <span class="middleBlurry symbols">=</span>
+                                    <span class="importantText blurryText">"</span><a class="importantText"
+                                        target="_blank"
+                                        href="https://docs.google.com/document/d/15gPK9S2VMoWqlK2Irp7geDuPgql31raFzqcG0b0eB6w/edit?usp=sharing">My
+                                        Resume</a><span class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
+
+                                    <span class="blurryText public-private">private</span>
+                                    <span class="blurryText string">String</span>
+                                    <span class="slightlyBlurry variables">gitHub</span>
+                                    <span class="middleBlurry symbols">=</span>
+                                    <span class="importantText blurryText">"\</span><i class="fa fa-github"></i>
+                                    <a class="importantText" href="https://github.com/lamah314"
+                                        target="_blank">GitHub</a><span class="importantText blurryText">"</span><span
+                                        class="blurryText symbols">;</span><br />
+                                </div>
+                            </div>
                     </p>
 
                 </article>
@@ -123,13 +127,13 @@
 
             </div>
             <p><br></p>
-            <section class="aboutMeSection">
+            <section id="aboutMeSection" class="indent-one">
                 <div>
                     <p><span class="blurryText public-private">public </span>
                         <span class="blurryText methods">Anthony_Lam</span><span class="blurryText symbols">(){ </span>
                         <span class="symbols slightlyEnlarge bold">//About Me</span><br />
 
-                        <span class="blurryText class indent-one">Education</span><span
+                        <span class="blurryText class indent-one">LifeEdu</span><span
                             class="blurryText symbols">.</span><span class="blurryText methods">set_</span><span
                             class="importantText">A_strong_background_in_mathematics</span><span
                             class="blurryText symbols">();</span><br />
@@ -153,69 +157,77 @@
                         <br>
                     </p>
                 </div>
-                <div>
-                    <p><span class="blurryText public-private">private</span>
-                        <span class="blurryText string">List</span><span class="blurryText symbols">&lt</span><span
-                            class="blurryText arguments">String</span><span class="blurryText symbols">&gt</span>
-                        <span class="importantText variables slightlyEnlarge">Technical_Inventory</span>
-                        <span class="blurryText symbols">=</span>
-                        <span class="blurryText string">Arrays</span><span class="blurryText symbols">.</span><span
-                            class="blurryText methods">asList</span><span class="blurryText symbols">(</span><span
-                            class="importantText blurryText">"</span><span class="importantText">Java</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Python</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Spring</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Hibernate</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">JPA</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span
-                            class="importantText">JavaScript</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">MVC</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">HTML5</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">CSS3</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Flexbox</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Grid</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">TDD</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Agile
-                            (Scrum)</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Object Oriented
-                            Programming (OOP)</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">AJAX</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">JSON</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Restful
-                            APIs</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Responsive Design /
-                            Mobile</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">SQL</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Relational
-                            Databases</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">Source Control /
-                            Git</span><span class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">SAS</span><span
-                            class="importantText blurryText">",</span>
-                        <span class="importantText blurryText">"</span><span class="importantText">R</span><span
-                            class="importantText blurryText">"</span><span class="blurryText symbols">);</span>
-                    </p>
+                <div class="grid-tech">
+                    <div class="grid-item grid-item-1">
+                        <p><span class="blurryText public-private">private</span>
+                            <span class="blurryText string">List</span><span class="blurryText symbols">&lt</span><span
+                                class="blurryText arguments">String</span><span class="blurryText symbols">&gt</span>
+                        </p>
+                    </div>
+                    <div class="grid-item grid-item-2">
+                        <p>
+                            <span class="importantText variables slightlyEnlarge bold">Technical_Inventory</span>
+                            <span class="slightlyBlurry symbols">=</span>
+                            <span class="blurryText string">Arrays</span><span class="blurryText symbols">.</span><span
+                                class="blurryText methods">asList</span><span class="blurryText symbols">(</span><span
+                                class="importantText blurryText">"</span><span class="importantText">Java</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span
+                                class="importantText">Python</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span
+                                class="importantText">Spring</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span
+                                class="importantText">Hibernate</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">JPA</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span
+                                class="importantText">JavaScript</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">MVC</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">HTML5</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">CSS3</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span
+                                class="importantText">Flexbox</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Grid</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">TDD</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Agile
+                                (Scrum)</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Object Oriented
+                                Programming (OOP)</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">AJAX</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">JSON</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Restful
+                                APIs</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Responsive Design
+                                /
+                                Mobile</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">SQL</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Relational
+                                Databases</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">Source Control /
+                                Git</span><span class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">SAS</span><span
+                                class="importantText blurryText">",</span>
+                            <span class="importantText blurryText">"</span><span class="importantText">R</span><span
+                                class="importantText blurryText">"</span><span class="blurryText symbols">);</span>
+                        </p>
+                    </div>
                 </div>
             </section>
-            <section class="projectSection">
+            <section id="projectSection">
                 <div>
                     <p class="indent-one"><br>
                         <span class="blurryText public-private">public top</span>
                         <span class="blurryText methods">list</span><span
-                            class="importantText slightlyEnlarge">Projects</span><span class="blurryText symbols">(){
+                            class="importantText slightlyEnlarge bold">Projects</span><span
+                            class="blurryText symbols">(){
                         </span><br />
                         <div class="indent-one">
                             <span class="blurryText class indent-one">System</span><span
@@ -225,11 +237,11 @@
                                 class="importantText">Team:</span><span class="importantText blurryText">"</span><span
                                 class="blurryText symbols">);</span><br />
 
-                            <span class="blurryText class indent-one">GitHub</span><span
-                                class="blurryText symbols">.</span><span class="blurryText methods">goTo</span><span
+                            <span class="middleBlurry class indent-one">GitHub</span><span
+                                class="blurryText symbols">.</span><span class="middleBlurry methods">goTo</span><span
                                 class="blurryText symbols">(</span><a class="importantText"
-                                href="https://github.com/lamah314/virtual-pet">Virtual Pet</a><span
-                                class="blurryText symbols">,</span><span class="blurryText symbols">);</span><br />
+                                href="https://github.com/lamah314/virtual-pet" target="_blank">Virtual Pet</a><span
+                                class="middleBlurry symbols">,</span><span class="blurryText symbols">);</span><br />
                             <br>
                         </div>
                         <div class="indent-one">
@@ -238,21 +250,24 @@
                                 class="blurryText symbols">.</span><span class="blurryText methods">println</span><span
                                 class="blurryText symbols">(</span><span class="importantText blurryText">"</span><span
                                 class="importantText">Individual:</span><span
-                                class="importantText blurryText">"</span><span class="blurryText symbols">);</span><br />
+                                class="importantText blurryText">"</span><span
+                                class="blurryText symbols">);</span><br />
 
-                            <span class="blurryText class indent-one">GitHub</span><span
-                                class="blurryText symbols">.</span><span class="blurryText methods">goTo</span><span
+                            <span class="middleBlurry class indent-one">GitHub</span><span
+                                class="blurryText symbols">.</span><span class="middleBlurry methods">goTo</span><span
                                 class="blurryText symbols">(</span><a class="importantText"
-                                href="https://github.com/lamah314/high-st-hospital">Hospital Mastery Project</a><span
-                                class="blurryText symbols">,</span>
-                                <a class="importantText"
-                                href="https://github.com/lamah314/leet-code">Algorithm Practice</a><span
-                                class="blurryText symbols">,</span><span class="blurryText symbols">);</span><br />
-                                <br>
+                                href="https://github.com/lamah314/high-st-hospital" target="_blank">Hospital Mastery
+                                Project</a><span class="middleBlurry symbols">,</span>
+                            <a class="importantText" href="https://github.com/lamah314/leet-code"
+                                target="_blank">Algorithm
+                                Practice</a><span class="middleBlurry symbols">,</span><span
+                                class="blurryText symbols">);</span><br />
+                            <br>
                         </div>
 
-                        <a class="importantText slightlyBlurry indent-two" href="#">return</a><span
-                         class="blurryText symbols">;</span><br />
+                        <a class="public-private middleBlurry indent-two" href="#">return</a>
+                        <a class="slightlyBlurry variables topLink" href="#">top</a><span
+                            class="blurryText symbols">;</span><br />
                         <span class="blurryText symbols indent-one">}</span><br />
                     </p>
 
