@@ -236,10 +236,15 @@ ul {
 
 .hero-image__title {
     color: White;
+    background-image: url(../images/spinnyThing.gif);
+    background-position: 50% 50%;
+    background-size:contain;
     margin-bottom: 3.14159rem;
     margin-left: 1rem;
-    background-image: url(../images/spinnyThing.gif);
-    animation: blinker .5s linear infinite;
+    padding: 2rem 2rem;
+    border-radius: 5rem;
+
+    /* animation: blinker .5s linear infinite; */
 }
 
 .main-header {
@@ -252,8 +257,9 @@ ul {
 }
 
 .main-header__title {
-    color: #fff;
+    color: lime;
     margin-left: 1rem;
+    text-shadow:  2px 3px green;
 }
 
 .nav--margin-right {
