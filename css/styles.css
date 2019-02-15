@@ -9,14 +9,6 @@ body {
     background-color: black;
 }
 
-    {
-    background-image: url("../images/darkScreen.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
-
 html {
     font: 20px/1.618;
     font-family: "Courier New", Courier, monospace;
@@ -28,19 +20,12 @@ html {
     margin: 0 auto;
     width: 95%;
     margin-top: 1rem;
-}
-
-#myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
+    max-width: 90rem;
 }
 
 .gridIntroColumn {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(2, auto) 20%;
     grid-template-rows: repeat(2, auto);
     width: 100%;
     grid-auto-rows: minmax(1px, auto);
@@ -95,6 +80,37 @@ html {
     }
 }
 
+.Description {
+    display: inline-block;
+    position: relative;
+}
+
+.Description .Description__Box {
+    visibility: hidden;
+    width: 300%;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    border-radius: 6px;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%; 
+}
+
+.Description .Description__Box .Description__Box--Center{
+    text-align: center;
+}
+
+.Description .Description__Box p{
+    text-align: left;
+}
+
+.Description:hover .Description__Box {
+    visibility: visible;
+}
+
 footer small {
     color: darkblue;
 }
@@ -113,7 +129,7 @@ a:hover {
 }
 
 #myPhoto {
-    width: 196px;
+    width: 100%;
 }
 
 #myPhoto__cap {
@@ -173,7 +189,7 @@ ul {
 }
 
 .methods {
-    color: green;
+    color: orange;
 }
 
 .arguments {
@@ -192,11 +208,16 @@ ul {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1105px) {
+.topTitle {
+    text-align: justify;
+    text-align-last: right;
+    width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
     .topTitle {
-        text-align: justify;
-        text-align-last: right;
-        width: 100%;
+        text-align: left;
+        text-align-last: left;
     }
 }
 
@@ -217,12 +238,14 @@ ul {
     color: White;
     margin-bottom: 3.14159rem;
     margin-left: 1rem;
+    background-image: url(../images/spinnyThing.gif);
+    animation: blinker .5s linear infinite;
 }
 
 .main-header {
     align-items: center;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     position: absolute;
     top: 0;
     width: 100%;
@@ -234,7 +257,7 @@ ul {
 }
 
 .nav--margin-right {
-    margin-right: 1rem;
+    margin-right: -1rem;
 }
 
 .nav__list {
@@ -249,3 +272,17 @@ ul {
 .nav__list-item:last-child {
     margin-right: 0;
 }
+
+@media (min-width: 550px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav--margin-right {
+        margin-right: 1rem;
+    }
+    .nav__list-item {
+        margin-right: 1rem;
+    }
+}
+
