@@ -96,14 +96,14 @@ html {
     /* Position the tooltip */
     position: absolute;
     bottom: 100%;
-    left: 50%; 
+    left: 50%;
 }
 
-.Description .Description__Box .Description__Box--Center{
+.Description .Description__Box .Description__Box--Center {
     text-align: center;
 }
 
-.Description .Description__Box p{
+.Description .Description__Box p {
     text-align: left;
 }
 
@@ -148,7 +148,7 @@ ul {
 }
 
 .blurryText {
-    filter: blur(1.6180339887px);
+    filter: blur(2.6180339887px);
 }
 
 .slightlyBlurry {
@@ -229,22 +229,57 @@ ul {
     display: flex;
     flex-direction: column;
     height: 120vh;
-    width: 95%;
+    width: 95vw;
     justify-content: center;
     margin-bottom: 2rem;
 }
 
+.header__grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 2rem;
+    margin-left: .6180339887rem;
+}
+
+.header__grid .grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 2;
+}
+
+.header__grid .grid-item-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 3;
+    text-align: center;
+}
+
 .hero-image__title {
     color: White;
-    background-image: url(../images/spinnyThing.gif);
-    background-position: 50% 50%;
-    background-size:contain;
-    margin-bottom: 3.14159rem;
-    margin-left: 1rem;
-    padding: 2rem 2rem;
-    border-radius: 5rem;
-
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     /* animation: blinker .5s linear infinite; */
+}
+
+.header__img {
+    display: block;
+    width: 9vw;
+    height: auto; 
+    object-fit: contain;
+    border-radius: 50%;
+    border: white 2px solid;
+}
+
+.header__img--contain {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
 }
 
 .main-header {
@@ -257,9 +292,12 @@ ul {
 }
 
 .main-header__title {
-    color: lime;
-    margin-left: 1rem;
-    text-shadow:  2px 3px green;
+    background-image: linear-gradient(110deg, rgb(185, 0, 185), lime);
+    color: transparent;
+    /* background-clip is what does the heavy lifting here */
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 1.6180339887rem;
 }
 
 .nav--margin-right {
@@ -291,4 +329,3 @@ ul {
         margin-right: 1rem;
     }
 }
-
