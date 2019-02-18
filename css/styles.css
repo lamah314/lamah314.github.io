@@ -80,12 +80,12 @@ html {
     }
 }
 
-.Description {
+.popUp {
     display: inline-block;
     position: relative;
 }
 
-.Description .Description__Box {
+.popUp .popUp__Content {
     visibility: hidden;
     width: 300%;
     background-color: black;
@@ -99,15 +99,32 @@ html {
     left: 50%;
 }
 
-.Description .Description__Box .Description__Box--Center {
+.popUp .popUp__Example {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+}
+
+.popUp .popUp__Content .popUp__Content--Center {
     text-align: center;
 }
 
-.Description .Description__Box p {
+.popUp .popUp__Content p {
     text-align: left;
 }
 
-.Description:hover .Description__Box {
+.popUp:hover .popUp__Content {
+    visibility: visible;
+}
+
+.popUp:hover .popUp__Example {
     visibility: visible;
 }
 
@@ -270,7 +287,7 @@ ul {
 .header__img {
     display: block;
     width: 9vw;
-    height: auto; 
+    height: auto;
     object-fit: contain;
     border-radius: 50%;
     border: white 2px solid;
@@ -292,7 +309,7 @@ ul {
 }
 
 .main-header__title {
-    background-image: linear-gradient(110deg, rgb(185, 0, 185), lime);
+    background-image: linear-gradient(110deg, purple, lime);
     color: transparent;
     /* background-clip is what does the heavy lifting here */
     background-clip: text;
