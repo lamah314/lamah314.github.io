@@ -346,3 +346,27 @@ ul {
         margin-right: 1rem;
     }
 }
+
+footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright {
+    left: 0;
+}
+
+.footer--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__list-item {
+    padding: 0 2rem;
+}
