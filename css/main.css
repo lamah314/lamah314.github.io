@@ -1,0 +1,380 @@
+* {
+    color: lime;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+    width: 100;
+}
+
+html {
+    font: 20px/1.618;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 95%;
+    min-height: 100%;
+    margin-top: 1rem;
+    max-width: 90rem;
+}
+
+.gridIntroColumn {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 20%;
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+    grid-auto-rows: minmax(1px, auto);
+    grid-auto-columns: minmax(1px, auto);
+}
+
+.gridIntroColumn .grid-item-2 {
+    text-align: left;
+    margin-right: 3px;
+}
+
+.gridIntroColumn .grid-item-3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.gridIntroColumn .grid-item-4 {
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.grid-tech {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: 100%;
+    grid-auto-columns: minmax(1px, auto);
+}
+
+.grid-tech .grid-item-2 {
+    margin-left: 3px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    /*margin-left: 200px;*/
+    /* Same width as the sidebar + left position in px */
+}
+
+.main h1:hover, h2:hover, h3:hover, h4:hover {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+.popUp {
+    display: inline-block;
+    position: relative;
+}
+
+.popUp .popUp__Content {
+    visibility: hidden;
+    width: 300%;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    border-radius: 6px;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+}
+
+.popUp .popUp__Example {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+}
+
+.popUp .popUp__Content .popUp__Content--Center {
+    text-align: center;
+}
+
+.popUp .popUp__Content p {
+    text-align: left;
+}
+
+.popUp:hover .popUp__Content {
+    visibility: visible;
+}
+
+.popUp:hover .popUp__Example {
+    visibility: visible;
+}
+
+footer small {
+    color: darkblue;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    animation: blinker 1s linear infinite;
+}
+
+#myPhoto img {
+    width: 100%;
+    height: auto;
+}
+
+#myPhoto {
+    width: 100%;
+}
+
+#myPhoto__cap {
+    background-color: transparent;
+    bottom: 3.14rem;
+    left: 3.14rem;
+    color: white;
+    position: relative;
+    width: 100%;
+    opacity: 0.123456789;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.blurryText {
+    filter: blur(2.6180339887px);
+}
+
+.slightlyBlurry {
+    filter: blur(.38196601125px);
+}
+
+.middleBlurry {
+    filter: blur(1px);
+}
+
+.public-private {
+    color: #FF007F;
+}
+
+.string {
+    color: #0080FF;
+}
+
+.importantText {
+    color: lime;
+    font-size: 106%;
+}
+
+.class {
+    color: #CC0099;
+}
+
+.slightlyEnlarge {
+    font-size: 120%;
+}
+
+.symbols {
+    color: white;
+}
+
+.variables {
+    color: #52E3F6;
+}
+
+.methods {
+    color: orange;
+}
+
+.arguments {
+    color: #B83A1B;
+}
+
+.indent-one {
+    margin-left: 3.14rem;
+}
+
+.indent-two {
+    margin-left: 6.28rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.topTitle {
+    text-align: justify;
+    text-align-last: right;
+    width: 100%;
+}
+
+@media screen and (min-width: 1100px) {
+    .topTitle {
+        text-align: left;
+        text-align-last: left;
+    }
+}
+
+.hero-image {
+    align-items: center;
+    background-image: url("../images/ikigaiEdit.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 95vw;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.header__grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 2rem;
+    margin-left: .6180339887rem;
+}
+
+.header__grid .grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 2;
+}
+
+.header__grid .grid-item-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 3;
+    text-align: center;
+}
+
+.hero-image__title {
+    color: White;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: blinker .5s linear infinite; */
+}
+
+.header__img {
+    display: block;
+    width: 9vw;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: white 2px solid;
+}
+
+.header__img--contain {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.main-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.main-header__title {
+    background-image: linear-gradient(110deg, purple, lime);
+    color: transparent;
+    /* background-clip is what does the heavy lifting here */
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 1.6180339887rem;
+}
+
+.nav--margin-right {
+    margin-right: -1rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__list-item:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 550px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav--margin-right {
+        margin-right: 1rem;
+    }
+    .nav__list-item {
+        margin-right: 1rem;
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.copyright {
+    left: 0;
+}
+
+.footer--center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__list-item {
+    padding: 0 2rem;
+}
+
+/************CV************/
+
+.cv {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
