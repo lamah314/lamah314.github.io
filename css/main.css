@@ -7,7 +7,10 @@
 
 body {
     background-color: black;
-    width: 100;
+}
+
+.body {
+    min-height: 100%;
 }
 
 html {
@@ -20,10 +23,119 @@ html {
     flex-direction: column;
     margin: 0 auto;
     width: 95%;
-    min-height: 100%;
     margin-top: 1rem;
     max-width: 90rem;
 }
+
+/************HEADER*****************/
+
+.hero-image {
+    align-items: center;
+    background-image: url("../images/ikigaiEdit.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 120vh;
+    width: 95vw;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.header__grid {
+    display: grid;
+    grid-template-rows: auto;
+    margin-bottom: 2rem;
+    margin-left: .6180339887rem;
+}
+
+.header__grid .grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 2;
+}
+
+.header__grid .grid-item-2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 3;
+    text-align: center;
+}
+
+.hero-image__title {
+    color: White;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* animation: blinker .5s linear infinite; */
+}
+
+.header__img {
+    display: block;
+    width: 9vw;
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    border: white 2px solid;
+}
+
+.header__img--contain {
+    width: 40%;
+    height: 40%;
+    object-fit: cover;
+}
+
+.main-header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.main-header__title {
+    background-image: linear-gradient(110deg, purple, lime);
+    color: transparent;
+    /* background-clip is what does the heavy lifting here */
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-left: 1.6180339887rem;
+}
+
+.nav--margin-right {
+    margin-right: -1rem;
+}
+
+.nav__list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__list-item:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 550px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav--margin-right {
+        margin-right: 1rem;
+    }
+    .nav__list-item {
+        margin-right: 1rem;
+    }
+}
+
+
+/***********MAIN**************************/
 
 .gridIntroColumn {
     display: grid;
@@ -80,58 +192,6 @@ html {
     50% {
         opacity: 0;
     }
-}
-
-.popUp {
-    display: inline-block;
-    position: relative;
-}
-
-.popUp .popUp__Content {
-    visibility: hidden;
-    width: 300%;
-    background-color: black;
-    color: lime;
-    border: 4px solid indigo;
-    border-radius: 6px;
-    padding: .5rem .2rem 0;
-    /* Position the tooltip */
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-}
-
-.popUp .popUp__Example {
-    visibility: hidden;
-    width: auto;
-    background-color: black;
-    color: lime;
-    border: 4px solid indigo;
-    padding: .5rem .2rem 0;
-    /* Position the tooltip */
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-}
-
-.popUp .popUp__Content .popUp__Content--Center {
-    text-align: center;
-}
-
-.popUp .popUp__Content p {
-    text-align: left;
-}
-
-.popUp:hover .popUp__Content {
-    visibility: visible;
-}
-
-.popUp:hover .popUp__Example {
-    visibility: visible;
-}
-
-footer small {
-    color: darkblue;
 }
 
 a {
@@ -240,119 +300,72 @@ ul {
     }
 }
 
-.hero-image {
-    align-items: center;
-    background-image: url("../images/ikigaiEdit.jpg");
-    background-position: 50% 50%;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    height: 120vh;
-    width: 95vw;
-    justify-content: center;
-    margin-bottom: 2rem;
+/********Descriptions**********/
+
+.popUp {
+    display: inline-block;
+    position: relative;
 }
 
-.header__grid {
-    display: grid;
-    grid-template-rows: auto;
-    margin-bottom: 2rem;
-    margin-left: .6180339887rem;
+.popUp .popUp__Content {
+    visibility: hidden;
+    width: 300%;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    border-radius: 6px;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
 }
 
-.header__grid .grid-item-1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 2;
+.popUp .popUp__Example {
+    visibility: hidden;
+    width: auto;
+    background-color: black;
+    color: lime;
+    border: 4px solid indigo;
+    padding: .5rem .2rem 0;
+    /* Position the tooltip */
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
 }
 
-.header__grid .grid-item-2 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 3;
+.popUp .popUp__Content .popUp__Content--Center {
     text-align: center;
 }
 
-.hero-image__title {
-    color: White;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* animation: blinker .5s linear infinite; */
+.popUp .popUp__Content p {
+    text-align: left;
 }
 
-.header__img {
-    display: block;
-    width: 9vw;
-    height: auto;
-    object-fit: contain;
-    border-radius: 50%;
-    border: white 2px solid;
+.popUp:hover .popUp__Content {
+    visibility: visible;
 }
 
-.header__img--contain {
-    width: 40%;
-    height: 40%;
-    object-fit: cover;
+.popUp:hover .popUp__Example {
+    visibility: visible;
 }
 
-.main-header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.main-header__title {
-    background-image: linear-gradient(110deg, purple, lime);
-    color: transparent;
-    /* background-clip is what does the heavy lifting here */
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-left: 1.6180339887rem;
-}
-
-.nav--margin-right {
-    margin-right: -1rem;
-}
-
-.nav__list {
-    display: flex;
-    list-style-type: none;
-}
-
-.nav__list-item:last-child {
-    margin-right: 0;
-}
-
-@media (min-width: 550px) {
-    .main-header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .nav--margin-right {
-        margin-right: 1rem;
-    }
-    .nav__list-item {
-        margin-right: 1rem;
-    }
-}
+/**********footer***********/
 
 footer {
     display: flex;
     flex-direction: row;
     width: 100%;
+    bottom: 0;
+    position: relative;
 }
 
 .copyright {
+    color: darkblue;
+    font-size: .5rem;
+    bottom: 0;
     left: 0;
+    position: absolute;
 }
 
 .footer--center {
