@@ -19,6 +19,7 @@ html {
     flex-direction: column;
     margin: 0 auto;
     width: 95%;
+    height: 100%;
     margin-top: 1rem;
     max-width: 90rem;
 }
@@ -348,8 +349,9 @@ ul {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
+    position:absolute;
+    bottom:0;
+    width: 100%;
 }
 
 .copyright {
