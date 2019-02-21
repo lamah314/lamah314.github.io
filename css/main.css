@@ -45,60 +45,185 @@ a:hover {
     animation: blinker 1s linear infinite;
 }
 /************HEADER*****************/
+/****************IKIGAI*************/
 
 .hero-image {
-    align-items: center;
-    background-image: url("../images/ikigaiEdit.jpg");
-    background-position: 50% 50%;
-    background-size: cover;
     display: flex;
     flex-direction: column;
-    height: 120vh;
-    width: 95vw;
-    justify-content: center;
-    margin-bottom: 2rem;
+    margin: 0 auto;
+    width: 1000px;
+    margin-top: 1rem;
+    max-width: 90rem;
+    height: 1000px;
+    position: relative;
 }
 
-.header__grid {
-    display: grid;
-    grid-template-rows: auto;
-    margin-bottom: 2rem;
-    margin-left: .6180339887rem;
+.venncircle {
+    width: 500px;
+    height: 500px;
+    -moz-border-radius: 200px;
+    -webkit-border-radius: 200px;
+    border-radius: 50%;
+    position: absolute;
+    -webkit-transition: color 0.5s linear, background-color 0.5s linear;
+    -moz-transition: color 0.5s linear, background-color 0.5s linear;
+    -o-transition: color 0.5s linear, background-color 0.5s linear;
+    transition: color 0.5s linear, background-color 0.5s linear;
+    border: white 2px solid;
 }
 
-.header__grid .grid-item-1 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
+.venncircle>p {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.venncirctop {
+    top: 100px;
+    left: 250px;
+    background-color: rgba(185, 24, 73, 0.5);
+    z-index: 4;
+}
+
+.venncirctop:hover {
+    z-index: 5;
+    background-color: rgba(185, 24, 73, 0.9);
+}
+
+.venncirclft {
+    left: 100px;
+    top: 250px;
+    background-color: rgba(21, 151, 123, 0.5);
     z-index: 2;
 }
 
-.header__grid .grid-item-2 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    z-index: 3;
+.venncirclft:hover {
+    z-index: 5;
+    background-color: rgba(21, 151, 123, 0.9);
+}
+
+.venncircrt {
+    right: 100px;
+    top: 250px;
+    background-color: rgba(122, 22, 153, 0.5);
+    z-index: 2;
+    text-align: right;
+}
+
+.venncircrt:hover {
+    z-index: 5;
+    background-color: rgba(122, 22, 153, 0.9);
+}
+
+.venncircbtm {
+    bottom: 100px;
+    left: 250px;
     text-align: center;
+    background-color: rgba(27, 86, 194, 0.5);
+    z-index: 3;
+}
+
+.venncircbtm:hover {
+    z-index: 5;
+    background-color: rgba(27, 86, 194, 0.9);
+}
+
+.venntxttop {
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 50px;
+}
+
+.venntxtrt {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    top: 240px;
+    right: 0;
+    margin-right: 1rem;
+}
+
+.venntxtlft {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    z-index: 5;
+    top: 240px;
+    margin-left: 1rem;
+}
+
+.venntxtbtm {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    bottom: -400px;
+}
+
+.tier2txt {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-weight: bold;
+    color: lime;
+    text-decoration: none;
+}
+
+.venntoplft {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+    top: 350px;
+    left: 300px;
+}
+
+.venntoprt {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+    top: 350px;
+    right: 300px;
+}
+
+.vennbtmlft {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+    bottom: 350px;
+    left: 300px;
+}
+
+.vennbtmrt {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    z-index: 20;
+    bottom: 350px;
+    right: 300px;
 }
 
 .hero-image__title {
+    font-size: 50px;
     color: White;
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* animation: blinker .5s linear infinite; */
+    z-index:100;
 }
 
 .header__img {
-    display: block;
-    width: 9vw;
+    position: absolute;
+    width: 200px;
     height: auto;
-    object-fit: contain;
+    top: 400px;
+    left: 400px;
     border-radius: 50%;
     border: white 2px solid;
+    z-index:20;
 }
 
 .header__img--contain {
