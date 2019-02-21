@@ -5,17 +5,16 @@
     padding: 0;
 }
 
-body {
-    background-color: black;
-}
-
 .body {
+    position:relative;
+    background-color: black;
     min-height: 100%;
 }
 
 html {
     font: 20px/1.618;
     font-family: "Courier New", Courier, monospace;
+    height: 100%;
 }
 
 .container {
@@ -25,8 +24,26 @@ html {
     width: 95%;
     margin-top: 1rem;
     max-width: 90rem;
+    height: 100%;
 }
 
+ul {
+    list-style-type: none;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    animation: blinker 1s linear infinite;
+}
 /************HEADER*****************/
 
 .hero-image {
@@ -188,20 +205,6 @@ html {
     animation: blinker 1s linear infinite;
 }
 
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    animation: blinker 1s linear infinite;
-}
-
 #myPhoto img {
     width: 100%;
     height: auto;
@@ -220,10 +223,6 @@ a:hover {
     width: 100%;
     opacity: 0.123456789;
     text-align: center;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .blurryText {
@@ -286,6 +285,7 @@ ul {
 .bold {
     font-weight: bold;
 }
+
 
 .topTitle {
     text-align: justify;
@@ -360,6 +360,16 @@ footer {
     position: relative;
 }
 
+.force--footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+}
+
 .copyright {
     color: darkblue;
     font-size: .5rem;
@@ -390,4 +400,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+}
+
+/****************IKIGAI*************/
+.circle {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid white;
 }
