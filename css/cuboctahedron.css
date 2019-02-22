@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+
+.scene {
+    width: 500px;
+    height: 500px;
+    perspective: 600px;
+    background-color: white;
+    display: block;
+    margin: 10rem auto;
+}
+
+.cuboctahedron {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-353.553390593px)
+}
+
+.cuboctahedron__face--cube {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    line-height: 250px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    border: 4px solid black;
+}
+
+.cuboctahedron__face--triangle {
+    position: absolute;
+    width: 1200px;
+    height: calc(1200px * 1.73205080757 / 2);
+    /* that there is sqrt(3) */
+}
+
+.cuboctahedron__face--triangle-up {
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.cuboctahedron__face--triangle-down {
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.cuboctahedron.show-right  { transform: translateZ(-100px) rotateY( -90deg); }
+
+
+.cuboctahedron__face--cube-front {
+    transform: rotateZ(-45deg) translateZ(353.553390593px);
+    /* transform: rotateZ(-45deg) translateZ(848.528137424px); */
+    /* that there is 600 * sqrt(2) */
+    background-color: rgba(194, 5, 194, 0.5)
+}
+
+.cuboctahedron__face--cube-right {
+    transform: rotateY( 90deg) rotateZ(45deg) translateZ(353.553390593px);
+    background-color: rgba(40, 5, 194, 0.5)
+}
+
+.cuboctahedron__face--cube-back {
+    transform: rotateY(180deg) rotateZ(135deg) translateZ(353.553390593px);
+    background-color: rgba(194, 5, 77, 0.5)
+}
+
+.cuboctahedron__face--cube-left {
+    transform: rotateY(-90deg) rotateZ(-135deg)translateZ(353.553390593px);
+    background-color: rgba(5, 194, 37, 0.5)
+}
+
+.cuboctahedron__face--cube-top {
+    transform: rotateX( 90deg) rotateZ(135deg) translateZ(353.553390593px);
+    background-color: rgba(181, 194, 5, 0.5)
+}
+
+.cuboctahedron__face--cube-bottom {
+    transform: rotateX(-90deg) rotateZ(-135deg) translateZ(353.553390593px);
+    background-color: rgba(5, 81, 194, 0.5)
+}
+
+.cuboctahedron__face--triangle-ufl {
+    transform: rotateZ(-45deg) translateZ(848.528137424px);
+}
