@@ -16,7 +16,7 @@ html {
     font-family: "Courier New", Courier, monospace;
 }
 
-.container {
+.hero-image {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
