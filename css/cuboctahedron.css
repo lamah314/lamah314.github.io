@@ -1,7 +1,9 @@
 :root {
+    --translateZ: -353.553390593px;
+    --square-size: 500px;
     --current-trans: "translateZ(-353.553390593px) rotateY( 0deg) rotateZ(45deg)"; 
-    --new-trans: "translateZ(-353.553390593px)";
-}
+    --new-trans: "translateZ(" + var(--translateZ) + ")";
+} 
 
 * {
     box-sizing: border-box;
@@ -26,8 +28,8 @@
 
 .cuboctahedron__face--cube {
     position: absolute;
-    width: 500px;
-    height: 500px;
+    width: var(--square-size);
+    height: var(--square-size);
     line-height: 250px;
     font-size: 40px;
     font-weight: bold;
@@ -38,8 +40,8 @@
 
 .cuboctahedron__face--triangle {
     position: absolute;
-    width: 1200px;
-    height: calc(1200px * 1.73205080757 / 2);
+    width: var(--square-size);
+    height: calc(var(--square-size) * 1.73205080757 / 2);
     /* that there is sqrt(3) */
 }
 
@@ -51,9 +53,12 @@
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
  /****SHOW***A***SIDE***With Animation*******/
+ .show-front-pageload {
+     transform: translateZ(-353.553390593px) rotateY( 0deg) rotateZ(45deg);
+ }
+
 .show-front {
     animation: animateShowFront 2s 1 forwards; 
-    /* transform:  translateZ(var(--cuboctahedron-Z)) rotateY( 0deg) rotateZ(45deg);  */
 }
 
 .show-right {
@@ -64,7 +69,19 @@
     animation: animateShowLeft 2s 1 forwards; 
 }
 
-/***Keyframes are repeated to reanimate object upon js code***/
+.show-top {
+    animation: animateShowTop 2s 1 forwards; 
+}
+
+.show-bottom {
+    animation: animateShowBottom 2s 1 forwards; 
+}
+
+.show-back {
+    animation: animateShowBack 2s 1 forwards; 
+}
+
+/***Keyframes are repeated to reanimate object upon changing variables in js***/
 @keyframes animateShowFront{
     0%   {transform: var(--current-trans);} 
     50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
@@ -78,6 +95,24 @@
 }
 
 @keyframes animateShowLeft{
+    0%   {transform: var(--current-trans);} 
+    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    100% {transform: var(--new-trans);}
+}
+
+@keyframes animateShowTop{
+    0%   {transform: var(--current-trans);} 
+    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    100% {transform: var(--new-trans);}
+}
+
+@keyframes animateShowBottom{
+    0%   {transform: var(--current-trans);} 
+    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    100% {transform: var(--new-trans);}
+}
+
+@keyframes animateShowBack{
     0%   {transform: var(--current-trans);} 
     50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}

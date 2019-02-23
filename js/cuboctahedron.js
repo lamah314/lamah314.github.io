@@ -1,10 +1,14 @@
 window.onload = function () {
     var cuboctahedron = document.querySelector('#cuboctahedron');
+    var ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
     var buttonFront = document.getElementsByClassName('front-button');
     var buttonRight = document.getElementsByClassName('right-button');
     var buttonLeft = document.getElementsByClassName('left-button');
-    var newTrans = '';
-    var currentClass = '';
+    var buttonTop = document.getElementsByClassName('top-button');
+    var buttonBottom = document.getElementsByClassName('bottom-button');
+    var buttonBack = document.getElementsByClassName('back-button');
+    var newTrans = "translateZ(-353.553390593px) rotateY( 0deg) rotateZ(45deg)";
+    var currentClass = '.show-front-pageload';
 
     for (var i = 0; i < buttonFront.length; i++) {
         buttonFront.item(i).onclick = changeToFrontSide;
@@ -18,6 +22,18 @@ window.onload = function () {
         buttonLeft.item(i).onclick = changeToLeftSide;
     }
 
+    for (var i = 0; i < buttonFront.length; i++) {
+        buttonTop.item(i).onclick = changeToTopSide;
+    }
+
+    for (var i = 0; i < buttonRight.length; i++) {
+        buttonBottom.item(i).onclick = changeToBottomSide;
+    }
+
+    for (var i = 0; i < buttonLeft.length; i++) {
+        buttonBack.item(i).onclick = changeToBackSide;
+    }
+
     function changeToFrontSide() {
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
@@ -25,7 +41,7 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(-353.553390593px) rotateY( 0deg) rotateZ(45deg)";
+        newTrans = "translateZ(" + ZValue + ") rotateY( 0deg) rotateZ(45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         cuboctahedron.classList.add("show-front");
         currentClass = "show-front";
@@ -38,7 +54,7 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(-353.553390593px) rotateY( -90deg)";
+        newTrans = "translateZ(" + ZValue + ") rotateY( -90deg) rotateX(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         console.log(cuboctahedron.className);
         cuboctahedron.classList.add("show-right");
@@ -52,19 +68,52 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(-353.553390593px) rotateY( 90deg)";
+        newTrans = "translateZ(" + ZValue + ") rotateY( 90deg) rotateX(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         console.log(cuboctahedron.className);
         cuboctahedron.classList.add("show-left");
         currentClass = "show-left";
     }
 
-    function moveItemBack(x) {
-        x.style.transfrom = 'translateZ(-1000px)';
+    function changeToTopSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(-90deg) rotateY(135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-top");
+        currentClass = "show-top";
     }
 
-    function moveItemForward(x) {
-        x.style.transfrom = 'translateZ(1000px)';
+    function changeToBottomSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX( 90deg) rotateY(135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-bottom");
+        currentClass = "show-bottom";
     }
 
+    function changeToBackSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateY( 180deg) rotateZ(135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-back");
+        currentClass = "show-back";
+    }
 };
