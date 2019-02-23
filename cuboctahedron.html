@@ -13,10 +13,12 @@
 
 <body class="body">
     <header class="main-header">
-        <h1 class="main-header__title">Anthony Lam</h1>
+        <input class="main-header__title front-button" type="button" value="Anthony Lam">
         <nav class="nav nav--margin-right">
             <ul class="nav__list">
-                <li class="nav__list-item"><input id="right-button" type="button" name="rotate-cube-side" value="right" /></li>
+                <li class="nav__list-item"><input class="right-button" type="button" value="Home"/></li>
+                <li class="nav__list-item"><input class="left-button" type="button" value="About Me"/></li>
+                <li class="nav__list-item"><input class="front-button" type="button" value="Projects"/></li>
             </ul>
         </nav>
     </header>
@@ -39,13 +41,13 @@
               <div class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-dfr">dfr</div> -->
         </div>
     </div>
-    
-    <input id="clickMe" type="button" value="click me text"/>
+
+    <input id="clickMe" type="button" value="click me text" />
 
 
-    <button type="button" 
-    onclick="document.getElementById('cuboctahedron').style.transform = 'translateZ(-353.553390593px) rotateY( -90deg)'">
-    Click Me!</button>
+    <button type="button"
+        onclick="document.getElementById('cuboctahedron').style.transform = 'translateZ(-353.553390593px) rotateY( -90deg)'">
+        Click Me!</button>
     <!-- <button class="cuboctahedron.show-right">right button possible action</p> -->
 </body>
 
