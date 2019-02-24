@@ -1,7 +1,7 @@
 :root {
-    --translateZ: -848.528137424px;
-    --square-size: 1200px;
-    --current-trans: "translateZ(-848.528137424px) rotateY( 0deg) rotateZ(45deg)"; 
+    --translateZ: -1131.3708499px;
+    --square-size: 1600px;
+    --current-trans: "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)"; 
     --new-trans: "translateZ(" + var(--translateZ) + ")";
 } 
 
@@ -10,12 +10,12 @@
 }
 
 .scene {
-    width: 1200px;
-    height: 1200px;
-    perspective: 500px;
+    width: 1600px;
+    height: 1600px;
+    perspective: 800px;
     background-color: black;
     display: block;
-    margin: 10rem auto;
+    margin: 0 auto;
     z-index:-2;
 }
 
@@ -31,7 +31,7 @@
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
-    line-height: 250px;
+    line-height: 1600px;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -45,7 +45,7 @@
     width: var(--square-size);
     height: calc(var(--square-size) * 1.73205080757 / 2);
     /* that there is sqrt(3) */
-    line-height:433.012701892px;
+    line-height:1385.64064606px;
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -62,7 +62,7 @@
 }
  /****SHOW***A***SIDE***With Animation*******/
  .show-front-pageload {
-     transform: translateZ(-848.528137424px) rotateY( 0deg) rotateZ(45deg);
+     transform: translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg);
  }
 
 .show-front {
@@ -125,170 +125,165 @@
 /***Keyframes are repeated to reanimate object upon changing variables in js***/
 @keyframes animateShowFront{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowRight{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowLeft{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTop{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowBottom{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowBack{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTFL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTBL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTBR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTFR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDFL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDBL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDBR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDFR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-1000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 /*********Design FACES**********/
 .cuboctahedron__face--cube-front {
-    transform: rotateZ(-45deg) translateZ(848.528137424px);
+    transform: rotateZ(-45deg) translateZ(1131.3708499px);
     /* that there is 1200 * sqrt(2) / 2 */
     background-color: rgba(194, 5, 194);
 }
 
 .cuboctahedron__face--cube-right {
-    transform: rotateY( 90deg) rotateZ(45deg) translateZ(848.528137424px);
+    transform: rotateY( 90deg) rotateZ(45deg) translateZ(1131.3708499px);
     background-color: rgba(40, 5, 194);
 }
 
 .cuboctahedron__face--cube-back {
-    transform: rotateY(180deg) rotateZ(135deg) translateZ(848.528137424px);
+    transform: rotateY(180deg) rotateZ(135deg) translateZ(1131.3708499px);
     background-color: rgba(194, 5, 77);
 }
 
 .cuboctahedron__face--cube-left {
-    transform: rotateY(-90deg) rotateZ(-135deg) translateZ(848.528137424px);
+    transform: rotateY(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
     background-color: rgba(5, 194, 37);
 }
 
 .cuboctahedron__face--cube-top {
-    transform: rotateX( 90deg) rotateZ(135deg) translateZ(848.528137424px);
+    transform: rotateX( 90deg) rotateZ(135deg) translateZ(1131.3708499px);
     background-color: rgba(181, 194, 5);
 }
 
 .cuboctahedron__face--cube-bottom {
-    transform: rotateX(-90deg) rotateZ(-135deg) translateZ(848.528137424px);
+    transform: rotateX(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
     background-color: rgba(5, 81, 194);
 }
 
 .cuboctahedron__face--triangle-ufl {
     transform-origin: center 66.6666666666666%;
-    transform: translateY(-86.6025403784px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(979.795897113px) rotateZ(180deg); 
-    /* */
+    transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg); 
+    /* initial translateY to recenter from center of rectangle to centroid of triangle */
     background-color: rgba(105, 7, 161);
 }
 
 .cuboctahedron__face--triangle-ubl {
     transform-origin: center 66.66666666666666%;
-    transform: translateY(-86.6025403784px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(979.795897113px) translateY(346.410161513px); 
+    transform: translateY(-115.470053838px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(1306.39452948px) translateY(461.880215351px); 
     background-color: rgba(7, 161, 7);
 }
 
 .cuboctahedron__face--triangle-ubr {
     transform-origin: center 66.6666666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(135deg) rotateX(35.2643897deg) translateZ(979.795897113px) rotateZ(180deg);
+    transform:  translateY(-115.470053838px) rotateY(135deg) rotateX(35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg);
     background-color: rgba(161, 51, 7);
 }
 
 .cuboctahedron__face--triangle-ufr {
     transform-origin: center 66.66666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(45deg) rotateX(35.2643897deg) translateZ(979.795897113px) translateY(346.410161513px); 
+    transform:  translateY(-115.470053838px) rotateY(45deg) rotateX(35.2643897deg) translateZ(1306.39452948px) translateY(461.880215351px); 
     background-color: rgba(7, 161, 161);
 }
 
 .cuboctahedron__face--triangle-dfl {
     transform-origin: center 66.6666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(979.795897113px); 
+    transform:  translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px); 
     background-color: rgba(105, 7, 161);
 }
 
 .cuboctahedron__face--triangle-dbl {
     transform-origin: center 66.6666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(-135deg) rotateX(-35.2643897deg) translateZ(979.795897113px) rotateZ(180deg) translateY(346.410161513px); 
+    transform:  translateY(-115.470053838px) rotateY(-135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg) translateY(461.880215351px); 
     background-color: rgba(20, 161, 7);
 }
 
 .cuboctahedron__face--triangle-dbr {
     transform-origin: center 66.6666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(135deg) rotateX(-35.2643897deg) translateZ(979.795897113px); 
+    transform:  translateY(-115.470053838px) rotateY(135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px); 
     background-color: rgba(161, 7, 40);
 }
 
 .cuboctahedron__face--triangle-dfr {
     transform-origin: center 66.6666666666666%;
-    transform:  translateY(-86.6025403784px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(979.795897113px) rotateZ(180deg); 
+    transform:  translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg) translateY(461.880215351px); 
     background-color: rgba(210, 231, 19);
 }
-/* translateY(36.0843918244px)  */
-/* 72.1687836487 */
-/* 108.253175473 */
-/* 144.337567297 */
-/* 180.421959122 */

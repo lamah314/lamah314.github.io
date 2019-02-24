@@ -17,7 +17,7 @@ window.onload = function () {
     var buttonDBR = document.getElementsByClassName('dbr-button');
     var buttonDFR = document.getElementsByClassName('dfr-button');
 
-    var newTrans = "translateZ(-848.528137424px) rotateY( 0deg) rotateZ(45deg)";
+    var newTrans = "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)";
     var currentClass = '.show-front-pageload';
 
     for (var i = 0; i < buttonFront.length; i++) {
@@ -166,11 +166,108 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateY(45deg) rotateX(45deg)";
+        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         console.log(cuboctahedron.className);
         cuboctahedron.classList.add("show-tfl");
         currentClass = "show-tfl";
     }
+
+    function changeToTBLSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-tbl");
+        currentClass = "show-tbl";
+    }
+
+    function changeToTBRSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(-135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-tbr");
+        currentClass = "show-tbr";
+    }
+
+    function changeToTFRSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(-45deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-tfr");
+        currentClass = "show-tfr";
+    }
+
+    function changeToDFLSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(45deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-dfl");
+        currentClass = "show-dfl";
+    }
+
+    function changeToDBLSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-dbl");
+        currentClass = "show-dbl";
+    }
+
+    function changeToDBRSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(-135deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-dbr");
+        currentClass = "show-dbr";
+    }
+
+    function changeToDFRSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(-45deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-dfr");
+        currentClass = "show-dfr";
+    }
 };
-// 35.2643897deg
