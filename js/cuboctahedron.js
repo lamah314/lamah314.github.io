@@ -7,7 +7,17 @@ window.onload = function () {
     var buttonTop = document.getElementsByClassName('top-button');
     var buttonBottom = document.getElementsByClassName('bottom-button');
     var buttonBack = document.getElementsByClassName('back-button');
-    var newTrans = "translateZ(-353.553390593px) rotateY( 0deg) rotateZ(45deg)";
+
+    var buttonTFL = document.getElementsByClassName('tfl-button');
+    var buttonTBL = document.getElementsByClassName('tbl-button');
+    var buttonTBR = document.getElementsByClassName('tbr-button');
+    var buttonTFR = document.getElementsByClassName('tfr-button');
+    var buttonDFL = document.getElementsByClassName('dfl-button');
+    var buttonDBL = document.getElementsByClassName('dbl-button');
+    var buttonDBR = document.getElementsByClassName('dbr-button');
+    var buttonDFR = document.getElementsByClassName('dfr-button');
+
+    var newTrans = "translateZ(-848.528137424px) rotateY( 0deg) rotateZ(45deg)";
     var currentClass = '.show-front-pageload';
 
     for (var i = 0; i < buttonFront.length; i++) {
@@ -32,6 +42,38 @@ window.onload = function () {
 
     for (var i = 0; i < buttonLeft.length; i++) {
         buttonBack.item(i).onclick = changeToBackSide;
+    }
+
+    for (var i = 0; i < buttonTFL.length; i++) {
+        buttonTFL.item(i).onclick = changeToTFLSide;
+    }
+
+    for (var i = 0; i < buttonTBL.length; i++) {
+        buttonTBL.item(i).onclick = changeToTBLSide;
+    }
+
+    for (var i = 0; i < buttonTBR.length; i++) {
+        buttonTBR.item(i).onclick = changeToTBRSide;
+    }
+
+    for (var i = 0; i < buttonTFR.length; i++) {
+        buttonTFR.item(i).onclick = changeToTFRSide;
+    }
+
+    for (var i = 0; i < buttonDFL.length; i++) {
+        buttonDFL.item(i).onclick = changeToDFLSide;
+    }
+
+    for (var i = 0; i < buttonDBL.length; i++) {
+        buttonDBL.item(i).onclick = changeToDBLSide;
+    }
+
+    for (var i = 0; i < buttonDBR.length; i++) {
+        buttonDBR.item(i).onclick = changeToDBRSide;
+    }
+
+    for (var i = 0; i < buttonDFR.length; i++) {
+        buttonDFR.item(i).onclick = changeToDFRSide;
     }
 
     function changeToFrontSide() {
@@ -116,4 +158,19 @@ window.onload = function () {
         cuboctahedron.classList.add("show-back");
         currentClass = "show-back";
     }
+
+    function changeToTFLSide() {
+        if (newTrans) {
+            document.documentElement.style.setProperty('--current-trans', newTrans);
+        }
+        if (currentClass) {
+            cuboctahedron.classList.remove(currentClass);
+        }
+        newTrans = "translateZ(" + ZValue + ") rotateY(45deg) rotateX(45deg)";
+        document.documentElement.style.setProperty('--new-trans', newTrans);
+        console.log(cuboctahedron.className);
+        cuboctahedron.classList.add("show-tfl");
+        currentClass = "show-tfl";
+    }
 };
+// 35.2643897deg
