@@ -6,7 +6,6 @@
 }
 
 .body {
-    position: relative;
     background-color:black;
     
 }
@@ -24,53 +23,7 @@ html {
     margin-top: 1rem;
     max-width: 90rem;
     height: 1000px;
-    position: relative;
-}
-
-/************HEADER*****************/
-
-.main-header {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    width: 100%;
-}
-
-.main-header__title {
-    background-image: linear-gradient(110deg, purple, lime);
-    color: transparent;
-    /* background-clip is what does the heavy lifting here */
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-left: 1.6180339887rem;
-}
-
-.nav--margin-right {
-    margin-right: -1rem;
-}
-
-.nav__list {
-    display: flex;
-    list-style-type: none;
-}
-
-.nav__list-item:last-child {
-    margin-right: 0;
-}
-
-@media (min-width: 550px) {
-    .main-header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .nav--margin-right {
-        margin-right: 1rem;
-    }
-    .nav__list-item {
-        margin-right: 1rem;
-    }
+    position:relative;
 }
 
 /**********footer***********/
@@ -84,7 +37,7 @@ footer {
 }
 
 .force--footer {
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
     left: 0;
@@ -98,7 +51,7 @@ footer {
     font-size: .5rem;
     bottom: 0;
     left: 0;
-    position: absolute;
+    position: relative;
 }
 
 .footer--center {
@@ -110,10 +63,10 @@ footer {
 .contact__list {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 }
 
 .contact__list-item {
-    padding: 0 2rem;
 }
 
 ul {
@@ -178,6 +131,7 @@ a:hover {
     top: 250px;
     background-color: rgba(21, 151, 123, 0.5);
     z-index: 2;
+    text-align: left;
 }
 
 .venncirclft:hover {
