@@ -3,26 +3,32 @@
     --square-size: 1600px;
     --current-trans: "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)"; 
     --new-trans: "translateZ(" + var(--translateZ) + ")";
+    --backface-visibility: "visible";
 } 
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .scene {
     width: 1600px;
     height: 1600px;
-    perspective: 800px;
+    perspective: 700px;
     background-color: black;
     display: block;
     margin: 0 auto;
     z-index:-2;
+    overflow: hidden;
+    border: solid white 3px;
 }
 
 #cuboctahedron {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: flex;
+    align-content: center;
     transform-style: preserve-3d;
     transition: transform 1s;
 }
@@ -31,13 +37,10 @@
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
-    line-height: 1600px;
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
     text-align: center;
-    border: 10px solid black;
-    backface-visibility: hidden;
+    border: 10px solid black;  
+    backface-visibility: var(--backface-visibility);
+    -webkit-backface-visibility: var(--backface-visibility);  
 }
 
 .cuboctahedron__face--triangle {
@@ -45,12 +48,9 @@
     width: var(--square-size);
     height: calc(var(--square-size) * 1.73205080757 / 2);
     /* that there is sqrt(3) */
-    line-height:1385.64064606px;
-    font-size: 40px;
-    font-weight: bold;
-    color: white;
     text-align: center;
-    backface-visibility: hidden;
+    backface-visibility: var(--backface-visibility);
+    -webkit-backface-visibility:var(--backface-visibility); 
 }
 
 .cuboctahedron__face--triangle-up {
@@ -125,85 +125,85 @@
 /***Keyframes are repeated to reanimate object upon changing variables in js***/
 @keyframes animateShowFront{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowRight{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowLeft{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTop{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowBottom{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowBack{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTFL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTBL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTBR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowTFR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDFL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDBL{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDBR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
 @keyframes animateShowDFR{
     0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-2000px) rotateY( 0deg) rotateZ(45deg);}
+    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
     100% {transform: var(--new-trans);}
 }
 
@@ -211,7 +211,7 @@
 .cuboctahedron__face--cube-front {
     transform: rotateZ(-45deg) translateZ(1131.3708499px);
     /* that there is 1200 * sqrt(2) / 2 */
-    background-color: rgba(194, 5, 194);
+    background-color: purple;
 }
 
 .cuboctahedron__face--cube-right {
@@ -245,7 +245,7 @@
     /* initial translateY to recenter from center of rectangle to centroid of triangle */
     background-color: rgba(105, 7, 161);
 }
-
+/* -115.470053838px */
 .cuboctahedron__face--triangle-ubl {
     transform-origin: center 66.66666666666666%;
     transform: translateY(-115.470053838px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(1306.39452948px) translateY(461.880215351px); 

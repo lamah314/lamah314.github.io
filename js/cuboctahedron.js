@@ -20,6 +20,8 @@ window.onload = function () {
     var newTrans = "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)";
     var currentClass = '.show-front-pageload';
 
+    document.documentElement.style.setProperty('--backface-visibility', "hidden"); /* doing this so faces load at startup */
+
     for (var i = 0; i < buttonFront.length; i++) {
         buttonFront.item(i).onclick = changeToFrontSide;
     }
