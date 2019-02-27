@@ -1,103 +1,41 @@
-* {
+.cuboctahedron__face--cube-front {
+    background-image: radial-gradient(black, black, purple);
+}
+
+.title--front-side {
+    background-image: linear-gradient(110deg, lime, purple);
+}
+
+.cuboctahedron__face--cube-front .nav-button{
     color: lime;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-.body {
-    background-color:black;
-    
+.cuboctahedron__face--cube-front strong {
+    color: lime;
 }
 
-html {
-    font: 20px/1.618;
-    font-family: "Courier New", Courier, monospace;
+.cuboctahedron__face--cube-front .contact__list-item {
+    color: lime;
 }
 
+
+
+/****************IKIGAI*************/
 .hero-image {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    width: 1000px;
-    margin-top: 1rem;
+    width: 750px;
     max-width: 90rem;
-    height: 1000px;
+    height: 750px;
     position:relative;
 }
 
-/**********footer***********/
-
-footer {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    bottom: 0;
-    position: relative;
-}
-
-.force--footer {
-    position: relative;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-}
-
-.copyright {
-    color: darkblue;
-    font-size: .5rem;
-    bottom: 0;
-    left: 0;
-    position: relative;
-}
-
-.footer--center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.contact__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.contact__list-item {
-}
-
-ul {
-    list-style-type: none;
-}
-
-@keyframes blinker {
-    50% {
-        opacity: 0;
-    }
-}
-
-h2:hover {
-    animation: blinker 1s linear infinite;
-}
-
-a {
-    text-decoration: none;
-}
-
-a:hover {
-    animation: blinker 1s linear infinite;
-}
-
-/****************IKIGAI*************/
-
-.venncircle {
-    width: 500px;
-    height: 500px;
-    -moz-border-radius: 200px;
-    -webkit-border-radius: 200px;
+.circle {
+    width: 375px;
+    height: 375px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
     position: absolute;
     -webkit-transition: color 0.5s linear, background-color 0.5s linear;
@@ -107,95 +45,95 @@ a:hover {
     border: white 2px solid;
 }
 
-.venncircle>p {
+.circle>p {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.venncirctop {
-    top: 100px;
-    left: 250px;
+.circtop {
+    top: 75px;
+    left: 187.5px;
     background-color: rgba(185, 24, 73, 0.5);
     z-index: 4;
 }
 
-.venncirctop:hover {
+.circtop:hover {
     z-index: 5;
     background-color: rgba(185, 24, 73, 0.9);
 }
 
-.venncirclft {
-    left: 100px;
-    top: 250px;
+.circlft {
+    left: 75px;
+    top: 187.5px;
     background-color: rgba(21, 151, 123, 0.5);
     z-index: 2;
     text-align: left;
 }
 
-.venncirclft:hover {
+.circlft:hover {
     z-index: 5;
     background-color: rgba(21, 151, 123, 0.9);
 }
 
-.venncircrt {
-    right: 100px;
-    top: 250px;
+.circrt {
+    right: 75px;
+    top: 187.5px;
     background-color: rgba(122, 22, 153, 0.5);
     z-index: 2;
     text-align: right;
 }
 
-.venncircrt:hover {
+.circrt:hover {
     z-index: 5;
     background-color: rgba(122, 22, 153, 0.9);
 }
 
-.venncircbtm {
-    bottom: 100px;
-    left: 250px;
+.circbtm {
+    bottom: 75px;
+    left: 187.5px;
     text-align: center;
     background-color: rgba(27, 86, 194, 0.5);
     z-index: 3;
 }
 
-.venncircbtm:hover {
+.circbtm:hover {
     z-index: 5;
     background-color: rgba(27, 86, 194, 0.9);
 }
 
-.venntxttop {
+.txttop {
     text-align: center;
     display: block;
     position: relative;
     top: 50px;
 }
 
-.venntxtrt {
+.txtrt {
     text-align: center;
     display: inline-block;
     position: relative;
     z-index: 5;
-    top: 240px;
+    top: 180px;
     right: 0;
     margin-right: 1rem;
 }
 
-.venntxtlft {
+.txtlft {
     text-align: center;
     display: inline-block;
     position: relative;
     z-index: 5;
-    top: 240px;
+    top: 180px;
     margin-left: 1rem;
 }
 
-.venntxtbtm {
+.txtbtm {
     text-align: center;
     display: inline-block;
     position: relative;
-    bottom: -400px;
+    bottom: -300px;
 }
 
 .tier2txt {
@@ -205,45 +143,46 @@ a:hover {
     text-decoration: none;
 }
 
-.venntoplft {
+.toplft {
     text-align: center;
     display: inline-block;
     position: absolute;
     z-index: 20;
-    top: 350px;
-    left: 300px;
+    top: 262.5px;
+    left: 225px;
 }
 
-.venntoprt {
+.toprt {
     text-align: center;
     display: inline-block;
     position: absolute;
     z-index: 20;
-    top: 350px;
-    right: 300px;
+    top: 262.5px;
+    right: 225px;
 }
 
-.vennbtmlft {
+.btmlft {
     text-align: center;
     display: inline-block;
     position: absolute;
     z-index: 20;
-    bottom: 350px;
-    left: 300px;
+    bottom: 262.5px;
+    left: 225px;
 }
 
-.vennbtmrt {
+.btmrt {
     text-align: center;
     display: inline-block;
     position: absolute;
     z-index: 20;
-    bottom: 350px;
-    right: 300px;
+    bottom: 262.5px;
+    right: 225px;
 }
 
 .hero-image__title {
-    font-size: 50px;
+    font-size: 34.5px;
     color: White;
+    background:transparent;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -253,10 +192,10 @@ a:hover {
 
 .header__img {
     position: absolute;
-    width: 200px;
+    width: 150px;
     height: auto;
-    top: 400px;
-    left: 400px;
+    top: 300px;
+    left: 300px;
     border-radius: 50%;
     border: white 2px solid;
     z-index:20;

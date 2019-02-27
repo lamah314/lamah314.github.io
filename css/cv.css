@@ -1,0 +1,38 @@
+.cuboctahedron__face--cube-bottom {
+    background-image: linear-gradient(110deg, darkgrey, red);
+}
+
+.title--bottom-side {
+    background-image: linear-gradient(110deg, blue, white);
+}
+
+.cuboctahedron__face--cube-bottom p {
+    color: white;
+}
+
+.cuboctahedron__face--cube-bottom .cv-center {
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+}
+
+.cuboctahedron__face--cube-bottom .nav-button {
+    color: white;
+}
+
+.cuboctahedron__face--cube-bottom .contact__list-item {
+    color: white;
+}
+
+.cuboctahedron__face--cube-bottom a {
+    color: white;
+}
+
+.cuboctahedron__face--cube-bottom i {
+    color: white;
+}
+
+.force-footer {
+    position: absolute;
+    bottom: 0;
+}
