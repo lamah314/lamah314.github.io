@@ -1,5 +1,7 @@
 window.onload = function () {
     var cuboctahedron = document.querySelector('#cuboctahedron');
+    var XValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateX');
+    var YValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateY');
     var ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
     var buttonFront = document.getElementsByClassName('front-button');
     var buttonRight = document.getElementsByClassName('right-button');
@@ -34,15 +36,15 @@ window.onload = function () {
         buttonLeft.item(i).onclick = changeToLeftSide;
     }
 
-    for (var i = 0; i < buttonFront.length; i++) {
+    for (var i = 0; i < buttonTop.length; i++) {
         buttonTop.item(i).onclick = changeToTopSide;
     }
 
-    for (var i = 0; i < buttonRight.length; i++) {
+    for (var i = 0; i < buttonBottom.length; i++) {
         buttonBottom.item(i).onclick = changeToBottomSide;
     }
 
-    for (var i = 0; i < buttonLeft.length; i++) {
+    for (var i = 0; i < buttonBack.length; i++) {
         buttonBack.item(i).onclick = changeToBackSide;
     }
 

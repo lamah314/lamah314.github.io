@@ -1,10 +1,13 @@
 :root {
+    --translateX: 0px;
+    --translateY: 0px;
     --translateZ: -1131.3708499px;
     --square-size: 1600px;
-    --current-trans: "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)"; 
+    --current-trans: "translateZ(" + var(--translateZ) + ") rotateY( 0deg) rotateZ(45deg)";
     --new-trans: "translateZ(" + var(--translateZ) + ")";
     --backface-visibility: "visible";
-} 
+    /* start visible to display sides during page load */
+}
 
 * {
     box-sizing: border-box;
@@ -19,9 +22,8 @@
     background-color: black;
     display: block;
     margin: 0 auto;
-    z-index:-2;
+    z-index: -2;
     overflow: hidden;
-    border: solid white 3px;
 }
 
 #cuboctahedron {
@@ -30,17 +32,16 @@
     position: flex;
     align-content: center;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: transform 3.14s;
 }
 
 .cuboctahedron__face--cube {
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
-    text-align: center;
-    border: 10px solid black;  
+    border: 10px solid black;
     backface-visibility: var(--backface-visibility);
-    -webkit-backface-visibility: var(--backface-visibility);  
+    -webkit-backface-visibility: var(--backface-visibility);
 }
 
 .cuboctahedron__face--triangle {
@@ -48,9 +49,8 @@
     width: var(--square-size);
     height: calc(var(--square-size) * 1.73205080757 / 2);
     /* that there is sqrt(3) */
-    text-align: center;
     backface-visibility: var(--backface-visibility);
-    -webkit-backface-visibility:var(--backface-visibility); 
+    -webkit-backface-visibility: var(--backface-visibility);
 }
 
 .cuboctahedron__face--triangle-up {
@@ -60,230 +60,375 @@
 .cuboctahedron__face--triangle-down {
     clip-path: polygon(0 0, 100% 0, 50% 100%);
 }
- /****SHOW***A***SIDE***With Animation*******/
- .show-front-pageload {
-     transform: translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg);
- }
+
+/****SHOW***A***SIDE***With Animation*******/
+
+.show-front-pageload {
+    transform: translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg);
+}
 
 .show-front {
-    animation: animateShowFront 2s 1 forwards; 
+    animation: animateShowFront 2s 1 forwards;
 }
 
 .show-right {
-    animation: animateShowRight 2s 1 forwards; 
+    animation: animateShowRight 2s 1 forwards;
 }
 
 .show-left {
-    animation: animateShowLeft 2s 1 forwards; 
+    animation: animateShowLeft 2s 1 forwards;
 }
 
 .show-top {
-    animation: animateShowTop 2s 1 forwards; 
+    animation: animateShowTop 2s 1 forwards;
 }
 
 .show-bottom {
-    animation: animateShowBottom 2s 1 forwards; 
+    animation: animateShowBottom 2s 1 forwards;
 }
 
 .show-back {
-    animation: animateShowBack 2s 1 forwards; 
+    animation: animateShowBack 2s 1 forwards;
 }
 
 .show-tfl {
-    animation: animateShowTFL 2s 1 forwards; 
+    animation: animateShowTFL 2s 1 forwards;
 }
 
 .show-tbl {
-    animation: animateShowTBL 2s 1 forwards; 
+    animation: animateShowTBL 2s 1 forwards;
 }
 
 .show-tbr {
-    animation: animateShowTBR 2s 1 forwards; 
+    animation: animateShowTBR 2s 1 forwards;
 }
 
 .show-tfr {
-    animation: animateShowTFR 2s 1 forwards; 
+    animation: animateShowTFR 2s 1 forwards;
 }
 
 .show-dfl {
-    animation: animateShowDFL 2s 1 forwards; 
+    animation: animateShowDFL 2s 1 forwards;
 }
 
 .show-dbl {
-    animation: animateShowDBL 2s 1 forwards; 
+    animation: animateShowDBL 2s 1 forwards;
 }
 
 .show-dbr {
-    animation: animateShowDBR 2s 1 forwards; 
+    animation: animateShowDBR 2s 1 forwards;
 }
 
 .show-dfr {
-    animation: animateShowDFR 2s 1 forwards; 
+    animation: animateShowDFR 2s 1 forwards;
 }
-
 
 /***Keyframes are repeated to reanimate object upon changing variables in js***/
-@keyframes animateShowFront{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+
+@keyframes animateShowFront {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowRight{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowRight {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowLeft{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowLeft {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowTop{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowTop {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowBottom{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowBottom {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowBack{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowBack {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowTFL{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowTFL {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowTBL{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowTBL {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowTBR{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowTBR {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowTFR{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowTFR {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowDFL{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowDFL {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowDBL{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowDBL {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowDBR{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowDBR {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
-@keyframes animateShowDFR{
-    0%   {transform: var(--current-trans);} 
-    50%  {transform: translateZ(-4000px) rotateY( 0deg) rotateZ(45deg);}
-    100% {transform: var(--new-trans);}
+@keyframes animateShowDFR {
+    0% {
+        transform: var(--current-trans);
+    }
+    50% {
+        transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
+    }
+    100% {
+        transform: var(--new-trans);
+    }
 }
 
 /*********Design FACES**********/
+
 .cuboctahedron__face--cube-front {
-    transform: rotateZ(-45deg) translateZ(1131.3708499px);
-    /* that there is 1200 * sqrt(2) / 2 */
-    background-color: purple;
+     /* that there is 1200 * sqrt(2) / 2 */
+    transform: rotateZ(-45deg) translateZ(1131.3708499px);  
 }
 
 .cuboctahedron__face--cube-right {
     transform: rotateY( 90deg) rotateZ(45deg) translateZ(1131.3708499px);
-    background-color: rgba(40, 5, 194);
+    background-image: linear-gradient(110deg, purple, blue);
 }
 
 .cuboctahedron__face--cube-back {
     transform: rotateY(180deg) rotateZ(135deg) translateZ(1131.3708499px);
-    background-color: rgba(194, 5, 77);
 }
 
 .cuboctahedron__face--cube-left {
     transform: rotateY(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
-    background-color: rgba(5, 194, 37);
 }
 
 .cuboctahedron__face--cube-top {
     transform: rotateX( 90deg) rotateZ(135deg) translateZ(1131.3708499px);
-    background-color: rgba(181, 194, 5);
+    background-image: linear-gradient(110deg, purple, blue);
+    ;
 }
 
 .cuboctahedron__face--cube-bottom {
     transform: rotateX(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
-    background-color: rgba(5, 81, 194);
 }
 
 .cuboctahedron__face--triangle-ufl {
-    transform-origin: center 66.6666666666666%;
-    transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg); 
-    /* initial translateY to recenter from center of rectangle to centroid of triangle */
-    background-color: rgba(105, 7, 161);
+    /* reassign middle of original rectangle to centroid of triangle */
+    transform-origin: center 33.3333333333%;
+    /* initial translateY to recenter from center of rectangle to centroid of triangle (3/2 the calculated change... not sure how that happened) */
+    transform: translateY(346.410161514px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(to right, blue, purple);
 }
-/* -115.470053838px */
+
 .cuboctahedron__face--triangle-ubl {
-    transform-origin: center 66.66666666666666%;
-    transform: translateY(-115.470053838px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(1306.39452948px) translateY(461.880215351px); 
-    background-color: rgba(7, 161, 7);
+    transform-origin: center 33.3333333%;
+    transform: translateY(346.410161514px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(110deg, purple, blue);
 }
 
 .cuboctahedron__face--triangle-ubr {
-    transform-origin: center 66.6666666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(135deg) rotateX(35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg);
-    background-color: rgba(161, 51, 7);
+    transform-origin: center 33.3333333%;
+    transform: translateY(346.410161514px) rotateY(135deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(110deg, purple, blue);
 }
 
 .cuboctahedron__face--triangle-ufr {
-    transform-origin: center 66.66666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(45deg) rotateX(35.2643897deg) translateZ(1306.39452948px) translateY(461.880215351px); 
-    background-color: rgba(7, 161, 161);
+    transform-origin: center 33.33333333%;
+    transform: translateY(346.410161514px) rotateY(45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(to left, blue, purple);
 }
 
 .cuboctahedron__face--triangle-dfl {
-    transform-origin: center 66.6666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px); 
-    background-color: rgba(105, 7, 161);
+    transform-origin: center 66.666666666666666%;
+    /* -115.47 is 1/2 the calculated correction distance... */
+    transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(to right , red, purple, purple);
 }
 
 .cuboctahedron__face--triangle-dbl {
-    transform-origin: center 66.6666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(-135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg) translateY(461.880215351px); 
-    background-color: rgba(20, 161, 7);
+    transform-origin: center 66.666666666666666%;
+    transform: translateY(-115.470053838px) rotateY(-135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(110deg, purple, blue);
 }
 
 .cuboctahedron__face--triangle-dbr {
-    transform-origin: center 66.6666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px); 
-    background-color: rgba(161, 7, 40);
+    transform-origin: center 66.666666666666666%;
+    transform: translateY(-115.470053838px) rotateY(135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(110deg, purple, blue);
 }
 
 .cuboctahedron__face--triangle-dfr {
-    transform-origin: center 66.6666666666666%;
-    transform:  translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px) rotateZ(180deg) translateY(461.880215351px); 
-    background-color: rgba(210, 231, 19);
+    transform-origin: center 66.666666666666666%;
+    transform: translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
+    background-image: linear-gradient(to left, red ,purple, purple);
+}
+
+/***************Content******************/
+
+input[type=button] {
+    border: 0;
+    z-index: 9000.000001;
+}
+
+.nav-button {
+    background: transparent;
+}
+
+input[type=button]:hover {
+    animation: blinker 1s linear infinite;
+}
+
+.title--left-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--right-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--top-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--tfl-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--tbl-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--tbr-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--tfr-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--dfl-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--dbl-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--dbr-side {
+    background-image: linear-gradient(110deg, purple, lime);
+}
+
+.title--dfr-side {
+    background-image: linear-gradient(110deg, purple, lime);
 }

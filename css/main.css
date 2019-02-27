@@ -1,12 +1,11 @@
 * {
-    color: lime;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 .body {
-    position:relative;
+    position: relative;
     background-color: black;
     min-height: 100%;
 }
@@ -42,6 +41,8 @@ a:hover {
     animation: blinker 1s linear infinite;
 }
 
+
+
 /*******HEADER***************/
 
 .main-header {
@@ -54,9 +55,8 @@ a:hover {
 }
 
 .main-header__title {
-    background-image: linear-gradient(110deg, purple, lime);
+    font-size: 3.14rem;
     color: transparent;
-    /* background-clip is what does the heavy lifting here */
     background-clip: text;
     -webkit-background-clip: text;
     margin-left: 1.6180339887rem;
@@ -88,224 +88,25 @@ a:hover {
     }
 }
 
-
-/***********MAIN**************************/
-
-.gridIntroColumn {
-    display: grid;
-    grid-template-columns: repeat(2, auto) 20%;
-    grid-template-rows: repeat(2, auto);
-    width: 100%;
-    grid-auto-rows: minmax(1px, auto);
-    grid-auto-columns: minmax(1px, auto);
-}
-
-.gridIntroColumn .grid-item-2 {
-    text-align: left;
-    margin-right: 3px;
-}
-
-.gridIntroColumn .grid-item-3 {
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.gridIntroColumn .grid-item-4 {
-    text-align: left;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-.grid-tech {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    width: 100%;
-    grid-auto-columns: minmax(1px, auto);
-}
-
-.grid-tech .grid-item-2 {
-    margin-left: 3px;
-}
-
-.main {
-    display: flex;
-    flex-direction: column;
-    /*margin-left: 200px;*/
-    /* Same width as the sidebar + left position in px */
-}
-
-.main h1:hover, h2:hover, h3:hover, h4:hover {
-    animation: blinker 1s linear infinite;
-}
-
-#myPhoto img {
-    width: 100%;
-    height: auto;
-}
-
-#myPhoto {
-    width: 100%;
-}
-
-#myPhoto__cap {
-    background-color: transparent;
-    bottom: 3.14rem;
-    left: 3.14rem;
-    color: white;
-    position: relative;
-    width: 100%;
-    opacity: 0.123456789;
-    text-align: center;
-}
-
-.blurryText {
-    filter: blur(2.6180339887px);
-}
-
-.slightlyBlurry {
-    filter: blur(.38196601125px);
-}
-
-.middleBlurry {
-    filter: blur(1px);
-}
-
-.public-private {
-    color: #FF007F;
-}
-
-.string {
-    color: #0080FF;
-}
-
-.importantText {
-    color: lime;
-    font-size: 106%;
-}
-
-.class {
-    color: #CC0099;
-}
-
-.slightlyEnlarge {
-    font-size: 120%;
-}
-
-.symbols {
-    color: white;
-}
-
-.variables {
-    color: #52E3F6;
-}
-
-.methods {
-    color: orange;
-}
-
-.arguments {
-    color: #B83A1B;
-}
-
-.indent-one {
-    margin-left: 3.14rem;
-}
-
-.indent-two {
-    margin-left: 6.28rem;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-
-.topTitle {
-    text-align: justify;
-    text-align-last: right;
-    width: 100%;
-}
-
-@media screen and (min-width: 1100px) {
-    .topTitle {
-        text-align: left;
-        text-align-last: left;
-    }
-}
-
-/********Descriptions**********/
-
-.popUp {
-    display: inline-block;
-    position: relative;
-}
-
-.popUp .popUp__Content {
-    visibility: hidden;
-    width: 300%;
-    background-color: black;
-    color: lime;
-    border: 4px solid indigo;
-    border-radius: 6px;
-    padding: .5rem .2rem 0;
-    /* Position the tooltip */
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-}
-
-.popUp .popUp__Example {
-    visibility: hidden;
-    width: auto;
-    background-color: black;
-    color: lime;
-    border: 4px solid indigo;
-    padding: .5rem .2rem 0;
-    /* Position the tooltip */
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-}
-
-.popUp .popUp__Content .popUp__Content--Center {
-    text-align: center;
-}
-
-.popUp .popUp__Content p {
-    text-align: left;
-}
-
-.popUp:hover .popUp__Content {
-    visibility: visible;
-}
-
-.popUp:hover .popUp__Example {
-    visibility: visible;
-}
-
 /**********footer***********/
 
 footer {
-    display: flex;
-    flex-direction: row;
     width: 100%;
     bottom: 0;
     position: relative;
 }
 
+/* 
 .force--footer {
     position: absolute;
-    right: 0;
+    right: auto;
     bottom: 0;
-    left: 0;
+    left: auto;
     padding: 1rem;
     background-color: #efefef;
     text-align: center;
-}
+  
+} */
 
 .copyright {
     color: darkblue;
@@ -324,17 +125,10 @@ footer {
 .contact__list {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .contact__list-item {
+    display: inline-block;
     padding: 0 2rem;
-}
-
-/************CV************/
-
-.cv {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
 }
