@@ -2,9 +2,13 @@
     --translateX: 0px;
     --translateY: 0px;
     --translateZ: -1131.3708499px;
+    --transitioningZ: -1870.21327273px;
+    --transitioningY: -381.9660113px;
     --square-size: 1600px;
     --current-trans: "translateZ(" + var(--translateZ) + ") rotateY( 0deg) rotateZ(45deg)";
+    --current-trans-moving: "translateZ(" + var(--transitioningZ) + ") translateY(" + var(--transitioningY) + ") rotateY( 0deg) rotateZ(45deg)";
     --new-trans: "translateZ(" + var(--translateZ) + ")";
+    --new-trans-moving: "translateZ(" + var(--transitioningZ) + ") translateY(" + var(--transitioningY) + ")";
     --backface-visibility: "visible";
     /* start visible to display sides during page load */
 }
@@ -16,24 +20,31 @@
 }
 
 .body {
-    position:relative;
-    top: -200px;
-    left: -200px;
+    width: 1200px;
+    height:1200px;
+    min-height: 1200px;
+    border: white 5px solid;
+    margin: 0 auto;
+    z-index: 10;
+    position: relative;
+    overflow:hidden scroll;
+    
 }
+
 .scene {
     width: 1600px;
     height: 1600px;
     perspective: 700px;
     background-color: black;
-    display: block;
-    margin: 0 auto;
+    position:relative;
+    top:-200px;
+    left:-200px;
     z-index: -2;
-    overflow: hidden;
 }
 
 #cuboctahedron {
-    width: 100%;
-    height: 100%;
+    width: 1600px;
+    height: 1600px;
     position: flex;
     align-content: center;
     transform-style: preserve-3d;
@@ -44,7 +55,7 @@
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
-    border: 10px solid black;
+    border: 10px solid white;
     backface-visibility: var(--backface-visibility);
     -webkit-backface-visibility: var(--backface-visibility);
 }
@@ -73,59 +84,59 @@
 }
 
 .show-front {
-    animation: animateShowFront 2s 1 forwards;
+    animation: animateShowFront 2s 1 forwards linear;
 }
 
 .show-right {
-    animation: animateShowRight 2s 1 forwards;
+    animation: animateShowRight 2s 1 forwards linear;
 }
 
 .show-left {
-    animation: animateShowLeft 2s 1 forwards;
+    animation: animateShowLeft 2s 1 forwards linear;
 }
 
 .show-top {
-    animation: animateShowTop 2s 1 forwards;
+    animation: animateShowTop 2s 1 forwards linear;
 }
 
 .show-bottom {
-    animation: animateShowBottom 2s 1 forwards;
+    animation: animateShowBottom 2s 1 forwards linear;
 }
 
 .show-back {
-    animation: animateShowBack 2s 1 forwards;
+    animation: animateShowBack 2s 1 forwards linear;
 }
 
 .show-tfl {
-    animation: animateShowTFL 2s 1 forwards;
+    animation: animateShowTFL 2s 1 forwards linear;
 }
 
 .show-tbl {
-    animation: animateShowTBL 2s 1 forwards;
+    animation: animateShowTBL 2s 1 forwards linear;
 }
 
 .show-tbr {
-    animation: animateShowTBR 2s 1 forwards;
+    animation: animateShowTBR 2s 1 forwards linear;
 }
 
 .show-tfr {
-    animation: animateShowTFR 2s 1 forwards;
+    animation: animateShowTFR 2s 1 forwards linear;
 }
 
 .show-dfl {
-    animation: animateShowDFL 2s 1 forwards;
+    animation: animateShowDFL 2s 1 forwards linear;
 }
 
 .show-dbl {
-    animation: animateShowDBL 2s 1 forwards;
+    animation: animateShowDBL 2s 1 forwards linear;
 }
 
 .show-dbr {
-    animation: animateShowDBR 2s 1 forwards;
+    animation: animateShowDBR 2s 1 forwards linear;
 }
 
 .show-dfr {
-    animation: animateShowDFR 2s 1 forwards;
+    animation: animateShowDFR 2s 1 forwards linear;
 }
 
 /***Keyframes are repeated to reanimate object upon changing variables in js***/
@@ -134,9 +145,19 @@
     0% {
         transform: var(--current-trans);
     }
+/* percent chosen as golden ratio */
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -146,9 +167,19 @@
     0% {
         transform: var(--current-trans);
     }
+
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -158,9 +189,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -170,9 +211,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -182,9 +233,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -194,9 +255,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -206,9 +277,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -218,9 +299,19 @@
     0% {
         transform: var(--current-trans);
     }
+    
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -230,9 +321,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -242,9 +343,19 @@
     0% {
         transform: var(--current-trans);
     }
+    
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -254,9 +365,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -266,9 +387,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -278,9 +409,19 @@
     0% {
         transform: var(--current-trans);
     }
+     
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -290,9 +431,19 @@
     0% {
         transform: var(--current-trans);
     }
+    
+    19.098300565% {
+        transform: var(--current-trans-moving);
+    }
+    
     50% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.1deg) rotateZ(45deg);
     }
+
+    80.901699435% {
+        transform: var(--new-trans-moving);
+    }
+
     100% {
         transform: var(--new-trans);
     }
@@ -301,8 +452,8 @@
 /*********Design FACES**********/
 
 .cuboctahedron__face--cube-front {
-     /* that there is 1200 * sqrt(2) / 2 */
-    transform: rotateZ(-45deg) translateZ(1131.3708499px);  
+    /* that there is 1200 * sqrt(2) / 2 */
+    transform: rotateZ(-45deg) translateZ(1131.3708499px);
 }
 
 .cuboctahedron__face--cube-right {
@@ -358,7 +509,7 @@
     transform-origin: center 66.666666666666666%;
     /* -115.47 is 1/2 the calculated correction distance... */
     transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to right , red, purple, purple);
+    background-image: linear-gradient(to right, red, purple, purple);
 }
 
 .cuboctahedron__face--triangle-dbl {
@@ -376,7 +527,7 @@
 .cuboctahedron__face--triangle-dfr {
     transform-origin: center 66.666666666666666%;
     transform: translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to left, red ,purple, purple);
+    background-image: linear-gradient(to left, red, purple, purple);
 }
 
 /***************Content******************/
