@@ -5,3 +5,34 @@
 .title--left-side {
     background-image: linear-gradient(110deg, white, white);
 }
+
+.cuboctahedron__face--cube-left .nav-button{
+    color: white;
+}
+
+.cuboctahedron__face--cube-left .contact__list-item {
+    color: white;
+}
+
+/***************About me*************************/
+
+.AboutMe-container {
+    width:100%;
+    border: 5px solid red;
+    position:relative;
+}
+
+.AboutMe-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 5px solid green;
+    grid-column-gap: 5px;
+}
+
+.AboutMe-grid-item {
+    border: 5px solid purple;
+}
+
+
+
