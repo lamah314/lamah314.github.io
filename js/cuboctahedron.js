@@ -3,15 +3,16 @@ window.onload = function () {
     var XValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateX');
     var YValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateY');
     var ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
+    var ZValueTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ-triangle');
     var YValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningY');
     var ZValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ');
+    var ZValueTransitionTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ-triangle');
     var buttonFront = document.getElementsByClassName('front-button');
     var buttonRight = document.getElementsByClassName('right-button');
     var buttonLeft = document.getElementsByClassName('left-button');
     var buttonTop = document.getElementsByClassName('top-button');
     var buttonBottom = document.getElementsByClassName('bottom-button');
     var buttonBack = document.getElementsByClassName('back-button');
-
     var buttonTFL = document.getElementsByClassName('tfl-button');
     var buttonTBL = document.getElementsByClassName('tbl-button');
     var buttonTBR = document.getElementsByClassName('tbr-button');
@@ -94,12 +95,13 @@ window.onload = function () {
             cuboctahedron.classList.remove(currentClass);
         }
         newTrans = "translateZ(" + ZValue + ") rotateY( 0deg) rotateZ(45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 0deg) rotateZ(45deg)";
+        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 0deg) rotateX(-5.4deg) rotateZ(45deg)  "; /* rotateX to keep obvious face towards user (not sure why it was 5.4deg...), still don't understand order of rotates*/
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-front");
         currentClass = "show-front";
     }
+    // rotateX(-8.45300545deg)
 
     function changeToRightSide() {
         if (newTrans) {
@@ -201,8 +203,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(45deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(-35.2643897deg) rotateY(45deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-tfl");
@@ -219,8 +221,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(135deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(135deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(-35.2643897deg) rotateY(135deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-tbl");
@@ -237,8 +239,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(-135deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(-135deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(-35.2643897deg) rotateY(-135deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-tbr");
@@ -255,8 +257,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(-35.2643897deg) rotateY(-45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(-45deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(-35.2643897deg) rotateY(-45deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(-35.2643897deg) rotateY(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-tfr");
@@ -273,8 +275,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(45deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(35.2643897deg) rotateY(45deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-dfl");
@@ -291,8 +293,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(135deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(135deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(35.2643897deg) rotateY(135deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-dbl");
@@ -309,8 +311,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(-135deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(-135deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(35.2643897deg) rotateY(-135deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-dbr");
@@ -327,8 +329,8 @@ window.onload = function () {
         if (currentClass) {
             cuboctahedron.classList.remove(currentClass);
         }
-        newTrans = "translateZ(" + ZValue + ") rotateX(35.2643897deg) rotateY(-45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(-45deg)";
+        newTrans = "translateZ(" + ZValueTriangle + ") rotateX(35.2643897deg) rotateY(-45deg)";
+        newTransTrans = "translateZ(" + ZValueTransitionTriangle + ") translateY(" + YValueTransition + ") rotateX(35.2643897deg) rotateY(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-dfr");

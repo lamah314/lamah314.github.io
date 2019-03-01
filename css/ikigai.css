@@ -8,6 +8,7 @@
 
 .cuboctahedron__face--cube-front .nav-button{
     color: white;
+    z-index: 300;
 }
 
 .cuboctahedron__face--cube-front strong {
@@ -27,16 +28,20 @@
 .hero-image {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     margin: 0 auto;
-    width: 750px;
+    width: 1200px;
     max-width: 90rem;
-    height: 750px;
-    position:relative;
+    height: 1200px;
+    position:absolute;
+    top: 200px;
+    left: 200px;
+    z-index: -1;
 }
 
 .circle {
-    width: 375px;
-    height: 375px;
+    width: 600px;
+    height: 600px;
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     border-radius: 50%;
@@ -51,13 +56,18 @@
 .circle>p {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     font-weight: bold;
+    font-size: 1.6180339887rem;
     color: #FFFFFF;
     text-decoration: none;
 }
 
+.tier2txt {
+    font-size: 1.6180339887rem;
+}
+
 .circtop {
-    top: 75px;
-    left: 187.5px;
+    top: 120px;
+    left: 300px;
     background-color: rgba(185, 24, 73, 0.5);
     z-index: 4;
 }
@@ -68,8 +78,8 @@
 }
 
 .circlft {
-    left: 75px;
-    top: 187.5px;
+    left: 120px;
+    top: 300px;
     background-color: rgba(21, 151, 123, 0.5);
     z-index: 2;
     text-align: left;
@@ -81,8 +91,8 @@
 }
 
 .circrt {
-    right: 75px;
-    top: 187.5px;
+    right: 120px;
+    top: 300px;
     background-color: rgba(122, 22, 153, 0.5);
     z-index: 2;
     text-align: right;
@@ -94,8 +104,8 @@
 }
 
 .circbtm {
-    bottom: 75px;
-    left: 187.5px;
+    bottom: 120px;
+    left: 300px;
     text-align: center;
     background-color: rgba(27, 86, 194, 0.5);
     z-index: 3;
@@ -110,7 +120,7 @@
     text-align: center;
     display: block;
     position: relative;
-    top: 50px;
+    top: 80px;
 }
 
 .txtrt {
@@ -118,7 +128,7 @@
     display: inline-block;
     position: relative;
     z-index: 5;
-    top: 180px;
+    top: 288px;
     right: 0;
     margin-right: 1rem;
 }
@@ -128,7 +138,7 @@
     display: inline-block;
     position: relative;
     z-index: 5;
-    top: 180px;
+    top: 288px;
     margin-left: 1rem;
 }
 
@@ -136,7 +146,7 @@
     text-align: center;
     display: inline-block;
     position: relative;
-    bottom: -300px;
+    bottom: -480px;
 }
 
 .tier2txt {
@@ -150,8 +160,8 @@
     display: inline-block;
     position: absolute;
     z-index: 20;
-    top: 262.5px;
-    left: 225px;
+    top: 420px;
+    left: 360px;
 }
 
 .toprt {
@@ -159,8 +169,8 @@
     display: inline-block;
     position: absolute;
     z-index: 20;
-    top: 262.5px;
-    right: 225px;
+    top: 420px;
+    right: 360px;
 }
 
 .btmlft {
@@ -168,8 +178,8 @@
     display: inline-block;
     position: absolute;
     z-index: 20;
-    bottom: 262.5px;
-    left: 225px;
+    bottom: 420px;
+    left: 360px;
 }
 
 .btmrt {
@@ -177,12 +187,12 @@
     display: inline-block;
     position: absolute;
     z-index: 20;
-    bottom: 262.5px;
-    right: 225px;
+    bottom: 420px;
+    right: 360px;
 }
 
 .hero-image__title {
-    font-size: 34.5px;
+    font-size: 55.2px;
     color: White;
     background:transparent;
     position: absolute;
@@ -194,10 +204,10 @@
 
 .header__img {
     position: absolute;
-    width: 150px;
+    width: 240px;
     height: auto;
-    top: 300px;
-    left: 300px;
+    top: 480px;
+    left: 480px;
     border-radius: 50%;
     border: white 2px solid;
     z-index:20;
