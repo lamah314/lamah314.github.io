@@ -1,5 +1,6 @@
 window.onload = function () {
     var cuboctahedron = document.querySelector('#cuboctahedron');
+    var scene = document.querySelector('#scene');
     var XValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateX');
     var YValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateY');
     var ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
@@ -27,6 +28,26 @@ window.onload = function () {
     var currentClass = '.show-front-pageload';
 
     document.documentElement.style.setProperty('--backface-visibility', "hidden"); /* doing this so faces load at startup */
+
+    /* pulled from internet to prefix for all browser types */
+    var pfx = ["webkit", "moz", "MS", "o", ""];
+    function PrefixedEvent(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p]+type, callback, false);
+        }
+    }
+    
+    /* I bet this adjustment works */
+    function RemovePrefixedEvent(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.removeEventListener(pfx[p]+type, callback, false);
+        }
+    }
+
+    /* change perspective so overflow does not glitch out */
+    PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
 
     for (var i = 0; i < buttonFront.length; i++) {
         buttonFront.item(i).onclick = changeToFrontSide;
@@ -84,6 +105,18 @@ window.onload = function () {
         buttonDFR.item(i).onclick = changeToDFRSide;
     }
 
+    function AnimationStartPerspective() {
+        scene.style= "perspective: 700px;";
+    }
+
+    function AnimationEndLR() {
+        scene.style= "perspective: 200px;";
+    }
+
+    function AnimationEndBot() {
+        scene.style= "perspective: 3.14159265358979323846264338px;";
+    }
+
     function changeToFrontSide() {
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
@@ -95,13 +128,12 @@ window.onload = function () {
             cuboctahedron.classList.remove(currentClass);
         }
         newTrans = "translateZ(" + ZValue + ") rotateY( 0deg) rotateZ(45deg)";
-        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 0deg) rotateX(-5.4deg) rotateZ(45deg)  "; /* rotateX to keep obvious face towards user (not sure why it was 5.4deg...), still don't understand order of rotates*/
+        newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 0deg) rotateX(-5.4deg) rotateZ(45deg)  "; /* rotateX to keep obvious face towards user (should be 8.45 = arctan(translateY/(translateX + perspective)), not sure why it was 5.4deg...); still don't understand order of rotates*/
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         cuboctahedron.classList.add("show-front");
         currentClass = "show-front";
     }
-    // rotateX(-8.45300545deg)
 
     function changeToRightSide() {
         if (newTrans) {
@@ -117,6 +149,10 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( -90deg) rotateX(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
+        /* To make sure perspective change works again after returning to same face */
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-right");
         currentClass = "show-right";
     }
@@ -135,6 +171,9 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 90deg) rotateX(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-left");
         currentClass = "show-left";
     }
@@ -171,6 +210,9 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX( 90deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         cuboctahedron.classList.add("show-bottom");
         currentClass = "show-bottom";
     }
@@ -336,4 +378,6 @@ window.onload = function () {
         cuboctahedron.classList.add("show-dfr");
         currentClass = "show-dfr";
     }
+
+    
 };
