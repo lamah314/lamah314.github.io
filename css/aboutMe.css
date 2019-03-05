@@ -14,11 +14,14 @@
     color: white;
 }
 
+.cuboctahedron__face--cube-left {
+    color: black;
+}
+
 /***************About me*************************/
 
 .AboutMe-container {
     width:100%;
-    border: 5px solid red;
     position:relative;
 }
 
@@ -26,13 +29,37 @@
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    border: 5px solid green;
-    grid-column-gap: 5px;
+    /* grid-column-gap: 15px; */
+    justify-content: center;
 }
 
 .AboutMe-grid-item {
-    border: 5px solid purple;
 }
+
+.AboutMe__figure {
+    width:390px;
+    height: auto;
+    margin-left: auto; 
+    margin-right: auto;
+    justify-content: center;
+    background-color: rgb(211, 223, 204);
+    border: 3.14159265358px solid black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.AboutMe__img {
+    width:300px;
+    height: auto;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.AboutMe__figcaption {
+    text-align: justify;
+}
+
 
 
 

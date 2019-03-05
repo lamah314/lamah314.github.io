@@ -31,7 +31,7 @@
         </nav>
 
     </header> -->
-    <div class="scene">
+    <div id="scene">
         <div id="cuboctahedron" class="show-front-pageload">
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-front">
                 <div class="container">
@@ -45,40 +45,43 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                        value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
                         </nav>
                     </div>
                     <br>
-                    <div class="hero-image">
-                        <div class="circle circtop">
-                            <p class="txttop">What I<br /><strong>LOVE</strong></p>
-                        </div>
-                        <div class="circle circlft">
-                            <p class="txtlft">What I am<br /><strong>GOOD AT</strong></p>
-                        </div>
-                        <div class="circle circrt">
-                            <p class="txtrt">What the world<br /><strong>NEEDS</strong></p>
-                        </div>
-                        <div class="circle circbtm">
-                            <p class="txtbtm">What I can be<br /><strong>PAID FOR</strong></p>
-                        </div>
+                    <div class="hero-image-container">
+                        <div class="hero-image">
+                            <div class="circle circtop">
+                                <p class="txttop">What I<br /><strong>LOVE</strong></p>
+                            </div>
+                            <div class="circle circlft">
+                                <p class="txtlft">What I am<br /><strong>GOOD AT</strong></p>
+                            </div>
+                            <div class="circle circrt">
+                                <p class="txtrt">What the world<br /><strong>NEEDS</strong></p>
+                            </div>
+                            <div class="circle circbtm">
+                                <p class="txtbtm">What I can be<br /><strong>PAID FOR</strong></p>
+                            </div>
 
-                        <p class="tier2txt toplft">PASSION</p>
-                        <p class="tier2txt toprt">MISSION</p>
-                        <p class="tier2txt btmlft">PROFESSION</p>
-                        <p class="tier2txt btmrt">VOCATION</p>
+                            <p class="tier2txt toplft">PASSION</p>
+                            <p class="tier2txt toprt">MISSION</p>
+                            <p class="tier2txt btmlft">PROFESSION</p>
+                            <p class="tier2txt btmrt">VOCATION</p>
 
+
+
+                        </div>
                         <figure class="header__img--contain">
                             <img class="header__img" src="images/spinnyThing.gif">
                         </figure>
 
                         <input class="back-button hero-image__title" type="button" value="CODING" />
-
                     </div>
                     <div class="force-footer">
                         <div class="footer--center">
@@ -110,9 +113,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -456,12 +459,12 @@
                                             </span></span><span class="blurryText symbols">);</span><br />
 
                                         <span class="middleBlurry string indent-one">Project</span>
-                                        <span class="importantText variables">LeetCode</span>
+                                        <span class="importantText variables">AlgorithmPractice</span>
                                         <span class="slightlyBlurry symbols">=</span>
                                         <span class="blurryText public-private">new</span>
                                         <span class="blurryText string">Project</span><span
                                             class="blurryText symbols">(</span><a class="importantText"
-                                            href="https://github.com/lamah314/leet-code"
+                                            href="https://github.com/lamah314/algorithm-practice.git"
                                             target="_blank">Go_To_Repo</a><span class="middleBlurry symbols">,</span>
                                         <span class="importantText popUp">Description<span class="popUp__Content">
                                                 <h4 class="popUp__Content--Center">LeetCode Algorithm Practice</h4>
@@ -527,9 +530,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -540,19 +543,41 @@
                             <div class="AboutMe-grid-item">
                                 <article>
                                     I'm a passionate software developer with a love for solving puzzles and creating
-                                    masterpieces. I have a strong background in Mathematics specializing in Actuarial
+                                    art. I have a strong background in Mathematics specializing in Actuarial
                                     Science and Statistics.
                                 </article>
                             </div>
                             <div class="AboutMe-grid-item">
-                                <article>
-                                    I met my wife in Math Club. She does statistics for a living. We have a son named
-                                    Escher, named after M.C. Escher.
-                                </article>
-                                <article> I have two dogs named Nacci and Noulli. They are named after the 2 famous
-                                    mathematicians, Fibonacci and Bernoulli.</article>
+
+                                <figure class="AboutMe__figure figure--family">
+                                    <img class="AboutMe__img img--family" src="images/family.jpg" alt="My Family">
+                                    <figcaption class="AboutMe__figcaption figcaption--family"><br>I have a lovely wife
+                                        and an adorable kid. </figcaption>
+                                </figure>
+                                <br>
+                                <figure class="AboutMe__figure figure--mathWife">
+                                    <img class="AboutMe__img img--mathWife" src="images/math wife.jpg" alt="My Wife">
+                                    <figcaption class="AboutMe__figcaption figcaption--mathWife"><br>I met my wife in
+                                        Math Club during college. </figcaption>
+                                </figure>
+                                <br>
+                                <figure class="AboutMe__figure figure--EscherHappy">
+                                    <img class="AboutMe__img img--EscherHappy" src="images/EscherHappy.jpeg"
+                                        alt="My Son">
+                                    <figcaption class="AboutMe__figcaption figcaption--EscherHappy"><br>Our son's name
+                                        is Escher, named after M.C. Escher.</figcaption>
+                                </figure>
+
                             </div>
                             <div class="AboutMe-grid-item">
+                                <figure class="AboutMe__figure figure--dogsPic">
+                                    <img class="AboutMe__img img--dogsPic" src="images/dogspic.jpg" alt="My Son">
+                                    <figcaption class="AboutMe__figcaption figcaption--dogsPic"><br>I have two dogs
+                                        named Nacci and Noulli. They are named after the 2 famous
+                                        mathematicians, Fibonacci and Bernoulli.</figcaption>
+                                </figure>
+
+
                                 <article>
                                     I love playing chess
                                 </article>
@@ -594,9 +619,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -634,9 +659,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -673,9 +698,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -719,7 +744,7 @@
 
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ufl">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--ufl-side front-button" type="button"
                             value="Anthony Lam">
@@ -730,9 +755,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -754,13 +779,13 @@
                                 </li>
                             </ul>
                         </div>
-                         </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ubl">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--ubl-side front-button" type="button"
                             value="Anthony Lam">
@@ -771,9 +796,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -795,13 +820,13 @@
                                 </li>
                             </ul>
                         </div>
-                         </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ubr">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--ubr-side front-button" type="button"
                             value="Anthony Lam">
@@ -812,9 +837,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -836,13 +861,13 @@
                                 </li>
                             </ul>
                         </div>
-                          </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ufr">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--ufr-side front-button" type="button"
                             value="Anthony Lam">
@@ -853,9 +878,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -877,13 +902,13 @@
                                 </li>
                             </ul>
                         </div>
-                          </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dfl">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--dfl-side front-button" type="button"
                             value="Anthony Lam">
@@ -894,9 +919,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -918,13 +943,13 @@
                                 </li>
                             </ul>
                         </div>
-                         </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dbl">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--dbl-side front-button" type="button"
                             value="Anthony Lam">
@@ -935,9 +960,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -959,13 +984,13 @@
                                 </li>
                             </ul>
                         </div>
-                         </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dbr">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--dbr-side front-button" type="button"
                             value="Anthony Lam">
@@ -976,9 +1001,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -1000,13 +1025,13 @@
                                 </li>
                             </ul>
                         </div>
-                         </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dfr">
-                <!-- <div class="container">
+                <div class="container">
                     <div class="main-header">
                         <input class="main-header__title title--dfr-side front-button" type="button"
                             value="Anthony Lam">
@@ -1017,9 +1042,9 @@
                                 <li class="nav__list-item"><input class="nav-button left-button" type="button"
                                         value="About Me" /></li>
                                 <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Blog" /></li>
-                                <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li>
+                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                                            value="Projects" /></li> -->
                                 <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
                                         value="CV" /></li>
                             </ul>
@@ -1040,16 +1065,12 @@
                                 </li>
                             </ul>
                         </div>
-                          </div>
+                    </div>
                     <small class="copyright"> &copy; Anthony Lam </small>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
-
-
-
-
     <!-- <nav class="nav nav--margin-right">
         <ul class="nav__list">
             <li class="nav__list-item"><input class="tfl-button" type="button" value="TFL" /></li>
