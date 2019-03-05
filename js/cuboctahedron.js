@@ -29,26 +29,6 @@ window.onload = function () {
 
     document.documentElement.style.setProperty('--backface-visibility', "hidden"); /* doing this so faces load at startup */
 
-    /* pulled from internet to prefix for all browser types */
-    var pfx = ["webkit", "moz", "MS", "o", ""];
-    function PrefixedEvent(element, type, callback) {
-        for (var p = 0; p < pfx.length; p++) {
-            if (!pfx[p]) type = type.toLowerCase();
-            element.addEventListener(pfx[p]+type, callback, false);
-        }
-    }
-    
-    /* I bet this adjustment works */
-    function RemovePrefixedEvent(element, type, callback) {
-        for (var p = 0; p < pfx.length; p++) {
-            if (!pfx[p]) type = type.toLowerCase();
-            element.removeEventListener(pfx[p]+type, callback, false);
-        }
-    }
-
-    /* change perspective so overflow does not glitch out */
-    PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
-
     for (var i = 0; i < buttonFront.length; i++) {
         buttonFront.item(i).onclick = changeToFrontSide;
     }
@@ -105,19 +85,45 @@ window.onload = function () {
         buttonDFR.item(i).onclick = changeToDFRSide;
     }
 
+    
+    /* pulled from internet to prefix for all browser types */
+    var pfx = ["webkit", "moz", "MS", "o", ""];
+    function PrefixedEvent(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.addEventListener(pfx[p] + type, callback, false);
+        }
+    }
+
+    /* I bet this adjustment works */
+    function RemovePrefixedEvent(element, type, callback) {
+        for (var p = 0; p < pfx.length; p++) {
+            if (!pfx[p]) type = type.toLowerCase();
+            element.removeEventListener(pfx[p] + type, callback, false);
+        }
+    }
+
+    /* change perspective so overflow does not glitch out */
+    PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
+
     function AnimationStartPerspective() {
-        scene.style= "perspective: 700px;";
+        scene.style = "perspective: 700px;";
+        /*remove so other animations do not affect perspective */
+        RemovePrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
     }
 
     function AnimationEndLR() {
-        scene.style= "perspective: 200px;";
+        scene.style = "perspective: 200px;";
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
     }
 
     function AnimationEndBot() {
-        scene.style= "perspective: 3.14159265358979323846264338px;";
+        scene.style = "perspective: 3.14159265358979323846264338px;";
+        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
     }
 
     function changeToFrontSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -136,6 +142,7 @@ window.onload = function () {
     }
 
     function changeToRightSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -150,14 +157,15 @@ window.onload = function () {
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
         /* To make sure perspective change works again after returning to same face */
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-right");
         currentClass = "show-right";
     }
 
     function changeToLeftSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -171,14 +179,15 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 90deg) rotateX(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-left");
         currentClass = "show-left";
     }
 
     function changeToTopSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -197,6 +206,7 @@ window.onload = function () {
     }
 
     function changeToBottomSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -210,14 +220,15 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX( 90deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
+        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         cuboctahedron.classList.add("show-bottom");
         currentClass = "show-bottom";
     }
 
     function changeToBackSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -236,6 +247,7 @@ window.onload = function () {
     }
 
     function changeToTFLSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -254,6 +266,7 @@ window.onload = function () {
     }
 
     function changeToTBLSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -272,6 +285,7 @@ window.onload = function () {
     }
 
     function changeToTBRSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -290,6 +304,7 @@ window.onload = function () {
     }
 
     function changeToTFRSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -308,6 +323,7 @@ window.onload = function () {
     }
 
     function changeToDFLSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -326,6 +342,7 @@ window.onload = function () {
     }
 
     function changeToDBLSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -344,6 +361,7 @@ window.onload = function () {
     }
 
     function changeToDBRSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -362,6 +380,7 @@ window.onload = function () {
     }
 
     function changeToDFRSide() {
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -379,5 +398,5 @@ window.onload = function () {
         currentClass = "show-dfr";
     }
 
-    
+
 };
