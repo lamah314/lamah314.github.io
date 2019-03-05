@@ -557,7 +557,7 @@
     transform-origin: center 33.3333333333%;
     /* initial translateY to recenter from center of rectangle to centroid of triangle (3/2 the calculated change... not sure how that happened) */
     transform: translateY(346.410161514px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to right, purple, blue);
+    background-image: linear-gradient(to right, blue, purple);
 }
 
 .cuboctahedron__face--triangle-ubl {
@@ -575,14 +575,14 @@
 .cuboctahedron__face--triangle-ufr {
     transform-origin: center 33.33333333%;
     transform: translateY(346.410161514px) rotateY(45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to left, purple, blue);
+    background-image: linear-gradient(to left, blue, purple);
 }
 
 .cuboctahedron__face--triangle-dfl {
     transform-origin: center 66.666666666666666%;
     /* -115.47 is 1/2 the calculated correction distance... */
     transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to right, red, purple, purple);
+    background-image: linear-gradient(to right, blue, red);
 }
 
 .cuboctahedron__face--triangle-dbl {
@@ -600,7 +600,7 @@
 .cuboctahedron__face--triangle-dfr {
     transform-origin: center 66.666666666666666%;
     transform: translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to left, red, purple, purple);
+    background-image: linear-gradient(to left, blue, red);
 }
 
 /***************Content******************/
