@@ -55,7 +55,7 @@
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
-    border: 10px solid lime;
+    border: 10px solid black;
     backface-visibility: var(--backface-visibility);
     -webkit-backface-visibility: var(--backface-visibility);
 }
@@ -196,7 +196,6 @@
     100% {
         transform: var(--new-trans);
     }
-
 }
 
 @keyframes animateShowLeft {

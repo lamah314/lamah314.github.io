@@ -8,6 +8,7 @@
 
 .cuboctahedron__face--cube-front .nav-button{
     color: white;
+    z-index: 300;
 }
 
 .cuboctahedron__face--cube-front strong {
@@ -24,8 +25,11 @@
 
 
 /****************IKIGAI*************/
-
-.hero-image-container {
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
     width: 1200px;
     max-width: 90rem;
     height: 1200px;
@@ -34,8 +38,6 @@
     left: 200px;
     margin: 0 auto;
     z-index:0;
-    
-
 }
 .hero-image {
     width:100%;
