@@ -531,7 +531,7 @@
 
 .cuboctahedron__face--cube-right {
     transform: rotateY( 90deg) rotateZ(45deg) translateZ(1131.3708499px);
-    background-image: linear-gradient(110deg, purple, blue);
+    background-image: linear-gradient( to right, green, blue, purple);
 }
 
 .cuboctahedron__face--cube-back {

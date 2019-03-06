@@ -1,5 +1,5 @@
 .cuboctahedron__face--cube-back {
-    background-image: radial-gradient(black, black, purple);
+    background-image: radial-gradient(black, rgb(20, 0, 20), purple);
 }
 
 .title--back-side {
