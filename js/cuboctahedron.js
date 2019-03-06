@@ -143,6 +143,7 @@ window.onload = function () {
 
     function changeToRightSide() {
         PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -156,13 +157,13 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( -90deg) rotateX(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-right");
         currentClass = "show-right";
     }
 
     function changeToLeftSide() {
-        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
+        PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);    
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -176,7 +177,6 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 90deg) rotateX(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-left");
         currentClass = "show-left";
     }
@@ -202,6 +202,7 @@ window.onload = function () {
 
     function changeToBottomSide() {
         PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
+        PrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         if (newTrans) {
             document.documentElement.style.setProperty('--current-trans', newTrans);
         }
@@ -215,7 +216,6 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX( 90deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        PrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         cuboctahedron.classList.add("show-bottom");
         currentClass = "show-bottom";
     }
