@@ -75,10 +75,6 @@
     /* Same width as the sidebar + left position in px */
 }
 
-.main h1:hover, h2:hover, h3:hover, h4:hover {
-    animation: blinker 1s linear infinite;
-}
-
 #myPhoto img {
     width: 100%;
     height: auto;

@@ -15,6 +15,7 @@
 }
 
 .cuboctahedron__face--cube-left {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: black;
 }
 
@@ -37,7 +38,7 @@
 }
 
 .AboutMe__figure {
-    width:390px;
+    width:385px;
     height: auto;
     margin-left: auto; 
     margin-right: auto;
@@ -54,11 +55,14 @@
     display: block;
     margin-left: auto; 
     margin-right: auto;
+    border: .6180339887px solid black;
+    border-radius: 6.28px;
 }
 
 .AboutMe__figcaption {
     text-align: justify;
 }
+
 
 
 

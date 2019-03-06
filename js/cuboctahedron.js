@@ -103,7 +103,7 @@ window.onload = function () {
         }
     }
 
-    /* change perspective so overflow does not glitch out */
+    /* change perspective on different faces so overflow does not glitch out */
     PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
 
     function AnimationStartPerspective() {
@@ -156,9 +156,6 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( -90deg) rotateX(-45deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        /* To make sure perspective change works again after returning to same face */
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-right");
         currentClass = "show-right";
@@ -179,8 +176,6 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateY( 90deg) rotateX(-135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
         cuboctahedron.classList.add("show-left");
         currentClass = "show-left";
@@ -220,8 +215,6 @@ window.onload = function () {
         newTransTrans = "translateZ(" + ZValueTransition + ") translateY(" + YValueTransition + ") rotateX( 90deg) rotateY(135deg)";
         document.documentElement.style.setProperty('--new-trans', newTrans);
         document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndLR);
-        // RemovePrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         PrefixedEvent(scene, "AnimationEnd", AnimationEndBot);
         cuboctahedron.classList.add("show-bottom");
         currentClass = "show-bottom";
