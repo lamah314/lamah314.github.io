@@ -37,9 +37,10 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+/* removing animation to avoid event listener confusing with perspective adjustments */
+/* a:hover {
     animation: blinker 1s linear infinite;
-}
+} */
 
 
 

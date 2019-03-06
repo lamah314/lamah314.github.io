@@ -614,9 +614,10 @@ input[type=button] {
     background: transparent;
 }
 
-input[type=button]:hover {
+/* removing animation to avoid event listener confusing with perspective adjustments */
+/* input[type=button]:hover {
     animation: blinker 1s linear infinite;
-}
+} */
 
 .title--left-side {
     background-image: linear-gradient(110deg, purple, limegreen);
