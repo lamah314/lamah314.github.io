@@ -1,5 +1,6 @@
 .cuboctahedron__face--cube-left {
     background-image: linear-gradient(to top right, blue, darkturquoise, green);
+    /* background-image: radial-gradient( turquoise,black); */
 }
 
 .title--left-side {
