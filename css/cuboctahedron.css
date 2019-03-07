@@ -475,7 +475,7 @@
 
 .cuboctahedron__face--cube-top {
     transform: rotateX( 90deg) rotateZ(135deg) translateZ(1131.3708499px);
-    background-image: linear-gradient(110deg, purple, blue);
+    background-image: linear-gradient(110deg, green, darkturquoise);
     ;
 }
 
@@ -488,50 +488,50 @@
     transform-origin: center 33.3333333333%;
     /* initial translateY to recenter from center of rectangle to centroid of triangle (3/2 the calculated change... not sure how that happened) */
     transform: translateY(346.410161514px) rotateY(-45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to bottom right, blue, purple);
+    background-image: linear-gradient(to bottom right, darkturquoise, purple);
 }
 
 .cuboctahedron__face--triangle-ubl {
     transform-origin: center 33.3333333%;
     transform: translateY(346.410161514px) rotateY(-135deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(110deg, blue, purple);
+    background-image: linear-gradient(110deg, blue, green);
 }
 
 .cuboctahedron__face--triangle-ubr {
     transform-origin: center 33.3333333%;
     transform: translateY(346.410161514px) rotateY(135deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(110deg, blue, purple);
+    background-image: linear-gradient(110deg, darkturquoise, red);
 }
 
 .cuboctahedron__face--triangle-ufr {
     transform-origin: center 33.33333333%;
     transform: translateY(346.410161514px) rotateY(45deg) rotateX(35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to bottom left, blue, purple);
+    background-image: linear-gradient(to bottom left,red, purple, purple);
 }
 
 .cuboctahedron__face--triangle-dfl {
     transform-origin: center 66.666666666666666%;
     /* -115.47 is 1/2 the calculated correction distance... */
     transform: translateY(-115.470053838px) rotateY(-45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to top right, blue, red);
+    background-image: linear-gradient(to top right, green, blue);
 }
 
 .cuboctahedron__face--triangle-dbl {
     transform-origin: center 66.666666666666666%;
     transform: translateY(-115.470053838px) rotateY(-135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(110deg, blue, purple);
+    background-image: linear-gradient(110deg, blue, darkturquoise);
 }
 
 .cuboctahedron__face--triangle-dbr {
     transform-origin: center 66.666666666666666%;
     transform: translateY(-115.470053838px) rotateY(135deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(110deg, blue, purple);
+    background-image: linear-gradient(110deg,  darkturquoise, purple);
 }
 
 .cuboctahedron__face--triangle-dfr {
     transform-origin: center 66.666666666666666%;
     transform: translateY(-115.470053838px) rotateY(45deg) rotateX(-35.2643897deg) translateZ(1306.39452948px);
-    background-image: linear-gradient(to top left, blue, red);
+    background-image: linear-gradient(to top left, blue, green);
 }
 
 /***************Content******************/
