@@ -1,5 +1,5 @@
 .cuboctahedron__face--cube-back {
-    background-image: radial-gradient(black, rgb(20, 0, 20), purple);
+    background-image: radial-gradient( darkblue,purple);
 }
 
 .title--back-side {
@@ -69,9 +69,11 @@
 }
 
 .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    /*margin-left: 200px;*/
     /* Same width as the sidebar + left position in px */
 }
 

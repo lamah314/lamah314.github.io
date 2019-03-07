@@ -38,11 +38,10 @@ a {
 }
 
 /* removing animation to avoid event listener confusing with perspective adjustments */
+
 /* a:hover {
     animation: blinker 1s linear infinite;
 } */
-
-
 
 /*******HEADER***************/
 
@@ -64,7 +63,8 @@ a {
     margin-left: 1.6180339887rem;
 }
 
-.main-header__title:hover {    
+.main-header__title:hover {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -73,6 +73,9 @@ a {
 }
 
 .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     list-style-type: none;
 }
@@ -102,22 +105,11 @@ footer {
     position: relative;
 }
 
-/* 
-.force--footer {
-    position: absolute;
-    right: auto;
-    bottom: 0;
-    left: auto;
-    padding: 1rem;
-    background-color: #efefef;
-    text-align: center;
-  
-} */
-
 .force-footer {
     position: absolute;
     bottom: 0;
-    left: 300px; /* manual... */  
+    left: 300px;
+    /* manual... */
 }
 
 .copyright {
@@ -135,6 +127,9 @@ footer {
 }
 
 .contact__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     justify-content: center;
