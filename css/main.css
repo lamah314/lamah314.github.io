@@ -64,6 +64,10 @@ a {
     margin-left: 1.6180339887rem;
 }
 
+.main-header__title:hover {    
+    transform: scale(1.1);
+}
+
 .nav--margin-right {
     margin-right: -1rem;
 }

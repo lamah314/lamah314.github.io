@@ -23,23 +23,23 @@
 
 .body {
     width: 1200px;
-    height:1200px;
-    
+    height: 1200px;
     margin: auto;
     z-index: 10;
     position: relative;
-    overflow: hidden auto; 
+    overflow: hidden auto;
 }
 
 #scene {
     width: 1600px;
     height: 1600px;
     perspective: 700px;
-    position:relative;
-    top:-200px;
-    left:-200px;
+    position: relative;
+    top: -200px;
+    left: -200px;
     z-index: -2;
 }
+
 /* perspective adjustments: 200px for left right, 3.14159265358px for bottom; no solution for top */
 
 #cuboctahedron {
@@ -146,25 +146,21 @@
         /* adjust perspective so that overlay of scene does not leak below set height */
         transform: var(--current-trans);
     }
-/* percent chosen as golden ratio */
+    /* percent chosen as golden ratio */
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -174,25 +170,20 @@
     0% {
         transform: var(--current-trans);
     }
-
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -202,25 +193,20 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -230,25 +216,20 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -258,25 +239,20 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -286,25 +262,20 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -314,25 +285,20 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -342,25 +308,20 @@
     0% {
         transform: var(--current-trans);
     }
-    
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000'translateY'/(5000'translateZ' + 700'perspective'))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         /* translateY to make it easier to spot, rotateX to fix face at viewer( 2000/(5000 + 700))*/
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -370,23 +331,18 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -396,23 +352,18 @@
     0% {
         transform: var(--current-trans);
     }
-    
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -422,23 +373,18 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -448,23 +394,18 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -474,23 +415,18 @@
     0% {
         transform: var(--current-trans);
     }
-     
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -500,23 +436,18 @@
     0% {
         transform: var(--current-trans);
     }
-    
     17.1884705085% {
         transform: var(--current-trans-moving);
     }
-    
     45% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     55% {
         transform: translateZ(-5000px) translateY(-2000px) rotateX(-19.3348085deg) rotateZ(45deg);
-    } 
-
+    }
     82.8115294915% {
         transform: var(--new-trans-moving);
     }
-
     100% {
         transform: var(--new-trans);
     }
@@ -614,9 +545,14 @@ input[type=button] {
     background: transparent;
 }
 
+.nav-button:hover {
+    transform: scale(1.1);
+}
+
 /* removing animation to avoid event listener confusing with perspective adjustments */
+
 /* input[type=button]:hover {
-    animation: blinker 1s linear infinite;
+    animation: blinker 1s linear infinite;   
 } */
 
 .title--left-side {
