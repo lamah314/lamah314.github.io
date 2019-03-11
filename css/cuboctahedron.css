@@ -784,11 +784,11 @@
 .cuboctahedron__face--cube-front {
     /* that there is 1200 * sqrt(2) / 2 */
     transform: rotateZ(-45deg) translateZ(1131.3708499px);
+    z-index:5;
 }
 
 .cuboctahedron__face--cube-right {
     transform: rotateY( 90deg) rotateZ(45deg) translateZ(1131.3708499px);
-    background-image: linear-gradient( to right, green, blue, purple);
 }
 
 .cuboctahedron__face--cube-back {

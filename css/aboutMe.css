@@ -1,5 +1,6 @@
 .cuboctahedron__face--cube-left {
-    background-image: linear-gradient(to top right, blue, darkturquoise, green);
+    background-image: linear-gradient( to right, green, blue, purple);
+    /* background-image: linear-gradient(to top right, blue, darkturquoise, green); */
     /* background-image: radial-gradient( turquoise,black); */
 }
 
@@ -38,7 +39,7 @@
 .AboutMe-grid-item {}
 
 .AboutMe__figure {
-    width: 385px;
+    width: 618.0339887px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -50,13 +51,17 @@
 }
 
 .AboutMe__img {
-    width: 300px;
+    width: 450px;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     border: .6180339887px solid black;
     border-radius: 6.28px;
+}
+
+.img--Anthony{
+    width: 400px;
 }
 
 .AboutMe__figcaption {

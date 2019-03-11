@@ -10,10 +10,78 @@
     <link rel="stylesheet" href="css/ikigai.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/aboutMe.css">
-
+    <link href="css/glider.css" rel="stylesheet" type="text/css">
+    <script src="js/glider.js"></script>
+    <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/cv.css">
 
-    <script type="text/javascript" src="js/cuboctahedron.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            document.querySelector('.glider').addEventListener('glider-slide-visible', function (event) {
+                var glider = Glider(this);
+                console.log('Slide Visible %s', event.detail.slide)
+            });
+            document.querySelector('.glider').addEventListener('glider-slide-hidden', function (event) {
+                console.log('Slide Hidden %s', event.detail.slide)
+            });
+            document.querySelector('.glider').addEventListener('glider-refresh', function (event) {
+                console.log('Refresh')
+            });
+            document.querySelector('.glider').addEventListener('glider-loaded', function (event) {
+                console.log('Loaded')
+            });
+            window._ = new Glider(document.querySelector('.glider'), {
+                slidesToShow: 1, //'auto',
+                slidesToScroll: 1,
+                itemWidth: 618.0339887,
+                draggable: true,
+                scrollLock: false,
+                dots: '#dots',
+                rewind: true,
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                },
+                // responsive: [
+                //     {
+                //         breakpoint: 800,
+                //         settings: {
+                //             slidesToScroll: 'auto',
+                //             itemWidth: 1000,
+                //             slidesToShow: 'auto',
+                //             exactWidth: true
+                //         }
+                //     },
+                //     {
+                //         breakpoint: 700,
+                //         settings: {
+                //             slidesToScroll: 1,
+                //             slidesToShow: 1,
+                //             dots: false,
+                //             arrows: false,
+                //         }
+                //     },
+                //     {
+                //         breakpoint: 600,
+                //         settings: {
+                //             slidesToScroll: 1,
+                //             slidesToShow: 1,
+                //         }
+                //     },
+                //     {
+                //         breakpoint: 500,
+                //         settings: {
+                //             slidesToScroll: 1,
+                //             slidesToShow: 1,
+                //             dots: false,
+                //             arrows: false,
+                //             scrollLock: true
+                //         }
+                //     }
+                // ]
+            });
+        });
+    </script>
 </head>
 
 
@@ -31,11 +99,11 @@
         </nav>
 
     </header> -->
-    <div id="scene">
+    <main id="scene">
         <div id="cuboctahedron" class="show-front-pageload">
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-front">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--front-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -52,9 +120,9 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
                     <br>
-                    <div class="hero-image-container">
+                    <main class="hero-image-container">
                         <div class="hero-image">
                             <div class="circle circtop">
                                 <p class="txttop">What I<br /><strong>LOVE</strong></p>
@@ -82,8 +150,8 @@
                         </figure>
 
                         <input class="back-button hero-image__title" type="button" value=" CODING" />
-                    </div>
-                    <div class="force-footer">
+                    </main>
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -97,13 +165,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
+
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-back">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--back-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -120,8 +189,8 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div class="home-container">
+                    </header>
+                    <main class="home-container">
                         <div>
                             <h3 id="home" class="topTitle"><span class="blurryText public-private">public class</span>
                                 <span class="importantText">Anthony_Lam</span>
@@ -234,7 +303,8 @@
                             <div>
                                 <p><span class="blurryText public-private">public </span>
                                     <span class="blurryText methods">Anthony_Lam</span><span
-                                        class="blurryText symbols">(){ </span>
+                                        class="blurryText symbols">(){
+                                    </span>
                                     <span class="symbols slightlyEnlarge bold">//About Me</span><br />
 
                                     <span class="blurryText class indent-one">LifeEdu</span><span
@@ -335,7 +405,8 @@
                                             (Scrum)</span><span class="importantText blurryText">"</span><span
                                             class="symbols blurryText">,</span>
                                         <span class="importantText blurryText">"</span><span
-                                            class="importantText">Object Oriented
+                                            class="importantText">Object
+                                            Oriented
                                             Programming (OOP)</span><span class="importantText blurryText">"</span><span
                                             class="symbols blurryText">,</span>
                                         <span class="importantText blurryText">"</span><span
@@ -363,7 +434,8 @@
                                             Databases</span><span class="importantText blurryText">"</span><span
                                             class="symbols blurryText">,</span>
                                         <span class="importantText blurryText">"</span><span
-                                            class="importantText">Source Control /
+                                            class="importantText">Source
+                                            Control /
                                             Git</span><span class="importantText blurryText">"</span><span
                                             class="symbols blurryText">,</span>
                                         <span class="importantText blurryText">"</span><span
@@ -519,9 +591,9 @@
                             </div>
                         </section>
                         <h3 class="blurryText symbols">}</h3>
-                    </div>
+                    </main>
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -535,13 +607,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-left">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--left-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -558,17 +630,27 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div class="AboutMe-container">
-                        <div class="AboutMe-grid">
-                            <div class="AboutMe-grid-item">
-                                <figure class="AboutMe__figure figure--dolphin">
-
-                                    <h3 class="AboutMe__figcaption figcaption--dolphin">I'm a passionate
+                    </header>
+                    <main class="glider-contain aboutMe-container">
+                        <div id="dots"></div>
+                        <div class="glider">
+                            <div class="glider-slide">
+                                <figure class="AboutMe__figure figure--Anthony">
+                                    <img class="AboutMe__img img--Anthony" src="images/AnthonyLam.jpg" alt="Me">
+                                    <figcaption class="AboutMe__figcaption figcaption--family"><br>I'm a passionate
                                         software developer with a love for solving technical problems
-                                        and creating interesting designs.</h3>
+                                        and creating interesting designs.</figcaption>
                                 </figure>
-                                <br>
+                            </div>
+                            <div class="glider-slide">
+                                <figure class="AboutMe__figure figure--family">
+                                    <img class="AboutMe__img img--family" src="images/family.jpg" alt="My Family">
+                                    <figcaption class="AboutMe__figcaption figcaption--family"><br>I have a lovely,
+                                        nerdy wife
+                                        and an adorable son.</figcaption>
+                                </figure>
+                            </div>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--mathWife">
                                     <img class="AboutMe__img img--mathWife" src="images/math wife.jpg" alt="My Wife">
                                     <figcaption class="AboutMe__figcaption figcaption--mathWife"><br>I met my wife in
@@ -577,34 +659,26 @@
                                         Actuarial Science with a double minor in Finance and Physics. So I knew she was
                                         the one before I had even met her. </figcaption>
                                 </figure>
-                                <br>
+                            </div>
+
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--proposal">
                                     <img class="AboutMe__img img--proposal" src="images/proposal.jpg" alt="Proposal">
                                     <figcaption class="AboutMe__figcaption figcaption--proposal"><br>I proposed to my
-                                        wife
-                                        by organizing my own piano recital that started 30 minutes before the exact
+                                        wife by organizing my own piano recital that started 30 minutes before the exact
                                         instance of our golden Anniversary (1.6180339887 * 365.2425).
                                         Please feel free to ask me more about it!</figcaption>
                                 </figure>
-
-
                             </div>
-                            <div class="AboutMe-grid-item">
-
-                                <figure class="AboutMe__figure figure--family">
-                                    <img class="AboutMe__img img--family" src="images/family.jpg" alt="My Family">
-                                    <figcaption class="AboutMe__figcaption figcaption--family"><br>I have a lovely,
-                                        nerdy wife
-                                        and an adorable son.</figcaption>
-                                </figure>
-                                <br>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--dogsPic">
                                     <img class="AboutMe__img img--dogsPic" src="images/dogspic.jpg" alt="My Son">
                                     <figcaption class="AboutMe__figcaption figcaption--dogsPic"><br>I have two dogs
                                         named Nacci and Noulli. They are named after the 2 famous
                                         mathematicians, Fibonacci and Bernoulli.</figcaption>
                                 </figure>
-                                <br>
+                            </div>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--EscherHappy">
                                     <img class="AboutMe__img img--EscherHappy" src="images/EscherHappy.jpeg"
                                         alt="My Son">
@@ -613,9 +687,17 @@
                                         that he would be "A sure, well-done lamb" but my wife did not allow it.
                                     </figcaption>
                                 </figure>
-
                             </div>
-                            <div class="AboutMe-grid-item">
+                            <div class="glider-slide">
+                                <figure class="AboutMe__figure figure--EscherCute">
+                                    <img class="AboutMe__img img--EscherCute" src="images/Escher Cute.jpg" alt="My Son">
+                                    <figcaption class="AboutMe__figcaption figcaption--EscherCute"><br>He loves throwing
+                                        out the Blue Steel. The greatest compliment I can recieve right now is that he
+                                        looks like me.
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--rubikscube">
                                     <img class="AboutMe__img img--rubikscube" src="images/rubikscubepresent.jpg"
                                         alt="My Son">
@@ -623,7 +705,8 @@
                                         technical ideas, including the Rubik's Cube.
                                     </figcaption>
                                 </figure>
-                                <br>
+                            </div>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--waterskiing">
                                     <img class="AboutMe__img img--waterskiing" src="images/waterskiing.jpg"
                                         alt="My Son">
@@ -631,23 +714,32 @@
                                         new places and learning new skills.
                                     </figcaption>
                                 </figure>
-                                <br>
+                            </div>
+                            <div class="glider-slide">
+                                <figure class="AboutMe__figure figure--eaten">
+                                    <img class="AboutMe__img img--eaten" src="images/eatenbywhale.jpg" alt="Whale">
+                                    <figcaption class="AboutMe__figcaption figcaption--eaten"><br>I
+                                        love posing for goofy pictures!</figcaption>
+                                </figure>
+                            </div>
+                            <div class="glider-slide">
                                 <figure class="AboutMe__figure figure--dolphin">
                                     <img class="AboutMe__img img--dolphin" src="images/dolphin.jpg" alt="WaterSkiing">
                                     <figcaption class="AboutMe__figcaption figcaption--dolphin"><br>Other activities
                                         that
                                         I love beside coding: chess, golf, solving puzzles, playing piano, spending time
                                         with my family,
-                                        making people laugh, helping people succeed, and much more!</figcaption>
+                                        helping other people, and much more!</figcaption>
                                 </figure>
-
-
-
                             </div>
-                        </div>
-                    </div>
 
-                    <div class="force-footer">
+                        </div>
+                        <button class="glider-prev">&laquo;</button>
+                        <button class="glider-next">&raquo;</button>
+
+                    </main>
+
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -661,13 +753,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-right">
-                <div class="container">
-                    <div class="main-header">
+                <div class="container project-container">
+                    <header class="main-header">
                         <input class="main-header__title title--right-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -684,12 +776,12 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div style="text-align:center;">
-                        <h1>UNDER CONSTRUCTION</h1>
-                    </div>
+                    </header>
+                    <main class="project__main-container">
+                        <h1>Under Construction</h1>
+                    </main>
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -703,13 +795,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-top">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--top-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -726,9 +818,9 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -742,13 +834,13 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div class="cuboctahedron__face--cube cuboctahedron__face--cube-bottom">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--bottom-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -765,8 +857,8 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
-                    <div class="Contact-container">
+                    </header>
+                    <main class="Contact-container">
                         <div class="Contact-center">
                             <br>
                             <p title="phone">Phone Number: (317)430-4762</p>
@@ -781,9 +873,9 @@
 
 
                         </div>
-                    </div>
+                    </main>
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -797,7 +889,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
@@ -805,7 +897,7 @@
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ufl">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--ufl-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -822,10 +914,10 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -839,14 +931,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ubl">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--ubl-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -863,10 +955,10 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -880,14 +972,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ubr">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--ubr-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -904,10 +996,10 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -921,14 +1013,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-down cuboctahedron__face--triangle-ufr">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--ufr-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -945,10 +1037,10 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -962,14 +1054,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dfl">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--dfl-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -986,10 +1078,10 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
-                    <div class="force-footer">
+                    <footer class="force-footer">
                         <div class="footer--center">
                             <ul class="contact__list">
                                 <li class="contact__list-item">317-430-4762</li>
@@ -1003,14 +1095,14 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </footer>
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
             <div
                 class="cuboctahedron__face--triangle cuboctahedron__face--triangle-up cuboctahedron__face--triangle-dbl">
                 <div class="container">
-                    <div class="main-header">
+                    <header class="main-header">
                         <input class="main-header__title title--dbl-side front-button" type="button"
                             value="Anthony Lam">
                         <nav class="nav nav--margin-right">
@@ -1027,7 +1119,7 @@
                                         value="Contact" /></li>
                             </ul>
                         </nav>
-                    </div>
+                    </header>
 
 
                     <div class="force-footer">
@@ -1130,7 +1222,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
     <!-- <nav class="nav nav--margin-right">
         <ul class="nav__list">
             <li class="nav__list-item"><input class="tfl-button" type="button" value="TFL" /></li>
@@ -1144,5 +1236,6 @@
         </ul>
     </nav> -->
 </body>
+<script type="text/javascript" src="js/cuboctahedron.js"></script>
 
 </html>

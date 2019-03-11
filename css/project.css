@@ -1,0 +1,20 @@
+.project-container {
+    /* background-image: linear-gradient( to right, green, blue, purple); */
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: 160%;
+    background-image: url("../images/darkScreen.gif");
+}
+
+.cuboctahedron__face--cube-right main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: red;
+    border: white 5px solid;
+}
+
+.cuboctahedron__face--cube-right .nav-button {
+    color: red;
+    z-index: 300;
+}
