@@ -46,11 +46,11 @@ a {
 /*******HEADER***************/
 
 .main-header {
-    align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     top: 0;
+
     width: 100%;
     z-index: 10;
 }
@@ -66,35 +66,6 @@ a {
 .main-header__title:hover {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-}
-
-.nav--margin-right {
-    margin-right: -1rem;
-}
-
-.nav__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    list-style-type: none;
-}
-
-.nav__list-item:last-child {
-    margin-right: 0;
-}
-
-@media (min-width: 550px) {
-    .main-header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .nav--margin-right {
-        margin-right: 1rem;
-    }
-    .nav__list-item {
-        margin-right: 1rem;
-    }
 }
 
 /**********footer***********/

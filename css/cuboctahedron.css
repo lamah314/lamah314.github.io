@@ -50,7 +50,7 @@
     transition: transform 3.14s;
 }
 
-.cuboctahedron__face--cube {
+.cuboctahedron__face--square {
     position: absolute;
     width: var(--square-size);
     height: var(--square-size);
@@ -781,31 +781,31 @@
 
 /*********Design FACES**********/
 
-.cuboctahedron__face--cube-front {
-    /* that there is 1200 * sqrt(2) / 2 */
+.cuboctahedron__face--square-front {
+    /* translateZ is 16 00 * sqrt(2) / 2 */
     transform: rotateZ(-45deg) translateZ(1131.3708499px);
     z-index:5;
 }
 
-.cuboctahedron__face--cube-right {
+.cuboctahedron__face--square-right {
     transform: rotateY( 90deg) rotateZ(45deg) translateZ(1131.3708499px);
 }
 
-.cuboctahedron__face--cube-back {
+.cuboctahedron__face--square-back {
     transform: rotateY(180deg) rotateZ(135deg) translateZ(1131.3708499px);
 }
 
-.cuboctahedron__face--cube-left {
+.cuboctahedron__face--square-left {
     transform: rotateY(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
 }
 
-.cuboctahedron__face--cube-top {
+.cuboctahedron__face--square-top {
     transform: rotateX( 90deg) rotateZ(135deg) translateZ(1131.3708499px);
     background-image: linear-gradient(110deg, green, darkturquoise);
     ;
 }
 
-.cuboctahedron__face--cube-bottom {
+.cuboctahedron__face--square-bottom {
     transform: rotateX(-90deg) rotateZ(-135deg) translateZ(1131.3708499px);
 }
 

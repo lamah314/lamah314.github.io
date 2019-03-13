@@ -1,94 +1,92 @@
-var cuboctahedron = document.querySelector('#cuboctahedron');
-var scene = document.querySelector('#scene');
-var XValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateX');
-var YValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateY');
-var ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
-var ZValueTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ-triangle');
-var YValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningY');
-var ZValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ');
-var ZValueTransitionTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ-triangle');
-var buttonFront = document.getElementsByClassName('front-button');
-var buttonRight = document.getElementsByClassName('right-button');
-var buttonLeft = document.getElementsByClassName('left-button');
-var buttonTop = document.getElementsByClassName('top-button');
-var buttonBottom = document.getElementsByClassName('bottom-button');
-var buttonBack = document.getElementsByClassName('back-button');
-var buttonTFL = document.getElementsByClassName('tfl-button');
-var buttonTBL = document.getElementsByClassName('tbl-button');
-var buttonTBR = document.getElementsByClassName('tbr-button');
-var buttonTFR = document.getElementsByClassName('tfr-button');
-var buttonDFL = document.getElementsByClassName('dfl-button');
-var buttonDBL = document.getElementsByClassName('dbl-button');
-var buttonDBR = document.getElementsByClassName('dbr-button');
-var buttonDFR = document.getElementsByClassName('dfr-button');
+let cuboctahedron = document.querySelector('#cuboctahedron');
+let scene = document.querySelector('#scene');
+let XValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateX');
+let YValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateY');
+let ZValue = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ');
+let ZValueTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--translateZ-triangle');
+let YValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningY');
+let ZValueTransition = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ');
+let ZValueTransitionTriangle = window.getComputedStyle(document.documentElement).getPropertyValue('--transitioningZ-triangle');
+const buttonFront = document.getElementsByClassName('front-button');
+const buttonRight = document.getElementsByClassName('right-button');
+const buttonLeft = document.getElementsByClassName('left-button');
+const buttonTop = document.getElementsByClassName('top-button');
+const buttonBottom = document.getElementsByClassName('bottom-button');
+const buttonBack = document.getElementsByClassName('back-button');
+const buttonTFL = document.getElementsByClassName('tfl-button');
+const buttonTBL = document.getElementsByClassName('tbl-button');
+const buttonTBR = document.getElementsByClassName('tbr-button');
+const buttonTFR = document.getElementsByClassName('tfr-button');
+const buttonDFL = document.getElementsByClassName('dfl-button');
+const buttonDBL = document.getElementsByClassName('dbl-button');
+const buttonDBR = document.getElementsByClassName('dbr-button');
+const buttonDFR = document.getElementsByClassName('dfr-button');
 
-var newTrans = "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)";
-var newTransTrans = "translateZ(-1870.21327273px) translateY(-381.9660113px) rotateY( 0deg) rotateZ(45deg)";
-var currentClass = '.show-front-pageload';
+let newTrans = "translateZ(-1131.3708499px) rotateY( 0deg) rotateZ(45deg)";
+let newTransTrans = "translateZ(-1870.21327273px) translateY(-381.9660113px) rotateY( 0deg) rotateZ(45deg)";
+let currentClass = '.show-front-pageload';
 
-document.documentElement.style.setProperty('--backface-visibility', "hidden"); /* doing this so faces load at startup */
-
-for (var i = 0; i < buttonFront.length; i++) {
-    buttonFront.item(i).onclick = changeToFrontSide;
+for (let i = 0; i < buttonFront.length; i++) {
+    buttonFront.item(i).addEventListener('click', changeToFrontSide);
 }
 
-for (var i = 0; i < buttonRight.length; i++) {
-    buttonRight.item(i).onclick = changeToRightSide;
+for (let i = 0; i < buttonRight.length; i++) {
+    buttonRight.item(i).addEventListener('click', changeToRightSide);
 }
 
-for (var i = 0; i < buttonLeft.length; i++) {
-    buttonLeft.item(i).onclick = changeToLeftSide;
+for (let i = 0; i < buttonLeft.length; i++) {
+    buttonLeft.item(i).addEventListener('click', changeToLeftSide);
 }
 
-for (var i = 0; i < buttonTop.length; i++) {
-    buttonTop.item(i).onclick = changeToTopSide;
+for (let i = 0; i < buttonTop.length; i++) {
+    buttonTop.item(i).addEventListener('click', changeToTopSide);
 }
 
-for (var i = 0; i < buttonBottom.length; i++) {
-    buttonBottom.item(i).onclick = changeToBottomSide;
+for (let i = 0; i < buttonBottom.length; i++) {
+    buttonBottom.item(i).addEventListener('click', changeToBottomSide);
 }
 
-for (var i = 0; i < buttonBack.length; i++) {
-    buttonBack.item(i).onclick = changeToBackSide;
+for (let i = 0; i < buttonBack.length; i++) {
+    buttonBack.item(i).addEventListener('click', changeToBackSide);
 }
 
-for (var i = 0; i < buttonTFL.length; i++) {
-    buttonTFL.item(i).onclick = changeToTFLSide;
+for (let i = 0; i < buttonTFL.length; i++) {
+    buttonTFL.item(i).addEventListener('click', changeToTFLSide);
 }
 
-for (var i = 0; i < buttonTBL.length; i++) {
-    buttonTBL.item(i).onclick = changeToTBLSide;
+for (let i = 0; i < buttonTBL.length; i++) {
+    buttonTBL.item(i).addEventListener('click', changeToTBLSide);
 }
 
-for (var i = 0; i < buttonTBR.length; i++) {
-    buttonTBR.item(i).onclick = changeToTBRSide;
+for (let i = 0; i < buttonTBR.length; i++) {
+    buttonTBR.item(i).addEventListener('click', changeToTBRSide);
 }
 
-for (var i = 0; i < buttonTFR.length; i++) {
-    buttonTFR.item(i).onclick = changeToTFRSide;
+for (let i = 0; i < buttonTFR.length; i++) {
+    buttonTFR.item(i).addEventListener('click', changeToTFRSide);
 }
 
-for (var i = 0; i < buttonDFL.length; i++) {
-    buttonDFL.item(i).onclick = changeToDFLSide;
+for (let i = 0; i < buttonDFL.length; i++) {
+    buttonDFL.item(i).addEventListener('click', changeToDFLSide);
 }
 
-for (var i = 0; i < buttonDBL.length; i++) {
-    buttonDBL.item(i).onclick = changeToDBLSide;
+for (let i = 0; i < buttonDBL.length; i++) {
+    buttonDBL.item(i).addEventListener('click', changeToDBLSide);
 }
 
-for (var i = 0; i < buttonDBR.length; i++) {
-    buttonDBR.item(i).onclick = changeToDBRSide;
+for (let i = 0; i < buttonDBR.length; i++) {
+    buttonDBR.item(i).addEventListener('click', changeToDBRSide);
 }
 
-for (var i = 0; i < buttonDFR.length; i++) {
-    buttonDFR.item(i).onclick = changeToDFRSide;
+for (let i = 0; i < buttonDFR.length; i++) {
+    buttonDFR.item(i).addEventListener('click', changeToDFRSide);
 }
 
 
 /* pulled from internet to prefix for all browser types */
-var pfx = ["webkit", "moz", "MS", "o", ""];
+let pfx = ["webkit", "moz", "MS", "o", ""];
 function PrefixedEvent(element, type, callback) {
-    for (var p = 0; p < pfx.length; p++) {
+    for (let p = 0; p < pfx.length; p++) {
         if (!pfx[p]) type = type.toLowerCase();
         element.addEventListener(pfx[p] + type, callback, false);
     }
@@ -96,7 +94,7 @@ function PrefixedEvent(element, type, callback) {
 
 /* I bet this adjustment works */
 function RemovePrefixedEvent(element, type, callback) {
-    for (var p = 0; p < pfx.length; p++) {
+    for (let p = 0; p < pfx.length; p++) {
         if (!pfx[p]) type = type.toLowerCase();
         element.removeEventListener(pfx[p] + type, callback, false);
     }
@@ -124,6 +122,7 @@ function AnimationEndBot() {
 function changeToFrontSide() {
     PrefixedEvent(scene, "AnimationStart", AnimationStartPerspective);
     if (newTrans) {
+        //track current position in order to make smooth animation
         document.documentElement.style.setProperty('--current-trans', newTrans);
     }
     if (newTransTrans) {
@@ -390,3 +389,6 @@ function changeToDFRSide() {
     currentClass = "show-dfr";
 }
 
+window.onload = function () {
+    document.documentElement.style.setProperty('--backface-visibility', "hidden"); /* doing this so faces load at startup and then go hidden afterwards*/
+}

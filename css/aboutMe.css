@@ -1,4 +1,4 @@
-.cuboctahedron__face--cube-left {
+.cuboctahedron__face--square-left {
     background-image: linear-gradient( to right, green, blue, purple);
     /* background-image: linear-gradient(to top right, blue, darkturquoise, green); */
     /* background-image: radial-gradient( turquoise,black); */
@@ -8,15 +8,15 @@
     background-image: linear-gradient(110deg, white, white);
 }
 
-.cuboctahedron__face--cube-left .nav-button {
+.cuboctahedron__face--square-left .nav-button {
     color: white;
 }
 
-.cuboctahedron__face--cube-left .contact__list-item {
+.cuboctahedron__face--square-left .contact__list-item {
     color: white;
 }
 
-.cuboctahedron__face--cube-left {
+.cuboctahedron__face--square-left {
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: black;
 }

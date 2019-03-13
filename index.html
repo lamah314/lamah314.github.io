@@ -5,6 +5,7 @@
     <title>Anthony Lam</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/icons.css">
     <link rel="stylesheet" href="css/cuboctahedron.css">
     <link rel="stylesheet" href="css/ikigai.css">
@@ -14,74 +15,7 @@
     <script src="js/glider.js"></script>
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/cv.css">
-
-    <script>
-        window.addEventListener('load', function () {
-            document.querySelector('.glider').addEventListener('glider-slide-visible', function (event) {
-                var glider = Glider(this);
-                console.log('Slide Visible %s', event.detail.slide)
-            });
-            document.querySelector('.glider').addEventListener('glider-slide-hidden', function (event) {
-                console.log('Slide Hidden %s', event.detail.slide)
-            });
-            document.querySelector('.glider').addEventListener('glider-refresh', function (event) {
-                console.log('Refresh')
-            });
-            document.querySelector('.glider').addEventListener('glider-loaded', function (event) {
-                console.log('Loaded')
-            });
-            window._ = new Glider(document.querySelector('.glider'), {
-                slidesToShow: 1, //'auto',
-                slidesToScroll: 1,
-                itemWidth: 618.0339887,
-                draggable: true,
-                scrollLock: false,
-                dots: '#dots',
-                rewind: true,
-                arrows: {
-                    prev: '.glider-prev',
-                    next: '.glider-next'
-                },
-                // responsive: [
-                //     {
-                //         breakpoint: 800,
-                //         settings: {
-                //             slidesToScroll: 'auto',
-                //             itemWidth: 1000,
-                //             slidesToShow: 'auto',
-                //             exactWidth: true
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 700,
-                //         settings: {
-                //             slidesToScroll: 1,
-                //             slidesToShow: 1,
-                //             dots: false,
-                //             arrows: false,
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 600,
-                //         settings: {
-                //             slidesToScroll: 1,
-                //             slidesToShow: 1,
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 500,
-                //         settings: {
-                //             slidesToScroll: 1,
-                //             slidesToShow: 1,
-                //             dots: false,
-                //             arrows: false,
-                //             scrollLock: true
-                //         }
-                //     }
-                // ]
-            });
-        });
-    </script>
+    <script src="js/gliderLoader.js"></script>
 </head>
 
 
@@ -101,25 +35,30 @@
     </header> -->
     <main id="scene">
         <div id="cuboctahedron" class="show-front-pageload">
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-front">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-front">
                 <div class="container">
                     <header class="main-header">
                         <input class="main-header__title title--front-side front-button" type="button"
                             value="Anthony Lam">
-                        <nav class="nav nav--margin-right">
-                            <ul class="nav__list">
-                                <li class="nav__list-item"><input class="nav-button back-button" type="button"
-                                        value="Home" /></li>
-                                <li class="nav__list-item"><input class="nav-button left-button" type="button"
-                                        value="About Me" /></li>
-                                <li class="nav__list-item"><input class="nav-button right-button" type="button"
-                                        value="Projects" /></li>
-                                <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
+                        <div class="navigation">
+                            <button class="burger"><span class="bar bar-front bar-top"></span>
+                                <span class="bar bar-front bar-mid"></span>
+                                <span class="bar bar-front bar-bot"></span></button>
+                            <nav class="nav nav--margin-right">
+                                <ul class="nav__list">
+                                    <li class="nav__list-item"><input class="nav-button back-button" type="button"
+                                            value="Home" /></li>
+                                    <li class="nav__list-item"><input class="nav-button left-button" type="button"
+                                            value="About Me" /></li>
+                                    <li class="nav__list-item"><input class="nav-button right-button" type="button"
+                                            value="Projects" /></li>
+                                    <!-- <li class="nav__list-item"><input class="nav-button top-button" type="button"
                                         value="Projects" /></li> -->
-                                <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
-                                        value="Contact" /></li>
-                            </ul>
-                        </nav>
+                                    <li class="nav__list-item"><input class="nav-button bottom-button" type="button"
+                                            value="Contact" /></li>
+                                </ul>
+                            </nav>
+                        </div>
                     </header>
                     <br>
                     <main class="hero-image-container">
@@ -170,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-back">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-back">
                 <div class="container">
                     <header class="main-header">
                         <input class="main-header__title title--back-side front-button" type="button"
@@ -611,7 +550,7 @@
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-left">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-left">
                 <div class="container">
                     <header class="main-header">
                         <input class="main-header__title title--left-side front-button" type="button"
@@ -757,7 +696,7 @@
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-right">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-right">
                 <div class="container project-container">
                     <header class="main-header">
                         <input class="main-header__title title--right-side front-button" type="button"
@@ -799,7 +738,7 @@
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-top">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-top">
                 <div class="container">
                     <header class="main-header">
                         <input class="main-header__title title--top-side front-button" type="button"
@@ -838,7 +777,7 @@
                     <small class="copyright"> &copy; Anthony Lam </small>
                 </div>
             </div>
-            <div class="cuboctahedron__face--cube cuboctahedron__face--cube-bottom">
+            <div class="cuboctahedron__face--square cuboctahedron__face--square-bottom">
                 <div class="container">
                     <header class="main-header">
                         <input class="main-header__title title--bottom-side front-button" type="button"
@@ -1237,5 +1176,6 @@
     </nav> -->
 </body>
 <script type="text/javascript" src="js/cuboctahedron.js"></script>
+<script type="text/javascript" src="js/navMenu.js"></script>
 
 </html>

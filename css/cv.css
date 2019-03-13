@@ -1,4 +1,4 @@
-.cuboctahedron__face--cube-bottom {
+.cuboctahedron__face--square-bottom {
     background-image: linear-gradient(110deg, darkgrey, blue);
     /* background-image: radial-gradient( blue,black); */
 }
@@ -7,29 +7,29 @@
     background-image: linear-gradient(110deg, red, white);
 }
 
-.cuboctahedron__face--cube-bottom p {
+.cuboctahedron__face--square-bottom p {
     color: white;
 }
 
-.cuboctahedron__face--cube-bottom .Contact-center {
+.cuboctahedron__face--square-bottom .Contact-center {
     position: absolute;
     width: 61.80339887%;
     padding: 10px;
     right: 0;
 }
 
-.cuboctahedron__face--cube-bottom .nav-button {
+.cuboctahedron__face--square-bottom .nav-button {
     color: white;
 }
 
-.cuboctahedron__face--cube-bottom .contact__list-item {
+.cuboctahedron__face--square-bottom .contact__list-item {
     color: white;
 }
 
-.cuboctahedron__face--cube-bottom a {
+.cuboctahedron__face--square-bottom a {
     color: white;
 }
 
-.cuboctahedron__face--cube-bottom i {
+.cuboctahedron__face--square-bottom i {
     color: white;
 }
