@@ -137,6 +137,7 @@ function changeToFrontSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-front");
     currentClass = "show-front";
+    burgerOff()
 }
 
 function changeToRightSide() {
@@ -157,6 +158,7 @@ function changeToRightSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-right");
     currentClass = "show-right";
+    burgerOff()
 }
 
 function changeToLeftSide() {
@@ -177,6 +179,7 @@ function changeToLeftSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-left");
     currentClass = "show-left";
+    burgerOff()
 }
 
 function changeToTopSide() {
@@ -196,6 +199,7 @@ function changeToTopSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-top");
     currentClass = "show-top";
+    burgerOff()
 }
 
 function changeToBottomSide() {
@@ -216,6 +220,7 @@ function changeToBottomSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-bottom");
     currentClass = "show-bottom";
+    burgerOff()
 }
 
 function changeToBackSide() {
@@ -235,6 +240,7 @@ function changeToBackSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-back");
     currentClass = "show-back";
+    burgerOff()
 }
 
 function changeToTFLSide() {
@@ -254,6 +260,7 @@ function changeToTFLSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-tfl");
     currentClass = "show-tfl";
+    burgerOff()
 }
 
 function changeToTBLSide() {
@@ -273,6 +280,7 @@ function changeToTBLSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-tbl");
     currentClass = "show-tbl";
+    burgerOff()
 }
 
 function changeToTBRSide() {
@@ -292,6 +300,7 @@ function changeToTBRSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-tbr");
     currentClass = "show-tbr";
+    burgerOff()
 }
 
 function changeToTFRSide() {
@@ -311,6 +320,7 @@ function changeToTFRSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-tfr");
     currentClass = "show-tfr";
+    burgerOff()
 }
 
 function changeToDFLSide() {
@@ -330,6 +340,7 @@ function changeToDFLSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-dfl");
     currentClass = "show-dfl";
+    burgerOff()
 }
 
 function changeToDBLSide() {
@@ -349,6 +360,7 @@ function changeToDBLSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-dbl");
     currentClass = "show-dbl";
+    burgerOff()
 }
 
 function changeToDBRSide() {
@@ -368,6 +380,7 @@ function changeToDBRSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-dbr");
     currentClass = "show-dbr";
+    burgerOff()
 }
 
 function changeToDFRSide() {
@@ -387,6 +400,7 @@ function changeToDFRSide() {
     document.documentElement.style.setProperty('--new-trans-moving', newTransTrans);
     cuboctahedron.classList.add("show-dfr");
     currentClass = "show-dfr";
+    burgerOff()
 }
 
 window.onload = function () {
