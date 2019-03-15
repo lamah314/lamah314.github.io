@@ -1,7 +1,7 @@
 .navigation {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 33.333333px;
     align-content: right;
 }
 
@@ -35,6 +35,11 @@
     background: none;
     height: 100px;
 }
+
+.burger {
+    cursor: pointer;
+}
+
 
 .bar {
     display: block;

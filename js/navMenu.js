@@ -8,7 +8,7 @@ for (let i = 0; i < navButton.length; i++) {
 
 function burgerAnimation() {
     toggleFlexVisibilityMulti(document.querySelectorAll('.nav'))
-    toggleBurgernAnimationFront()
+    toggleBurgerAnimationFront()
 }
 
 function toggleFlexVisibilityMulti(elements) {
@@ -21,7 +21,7 @@ function toggleFlexVisibilitySingle(element) {
     element.classList.toggle('open-flex');
 }
 
-function toggleBurgernAnimationFront() {
+function toggleBurgerAnimationFront() {
     var barTops = document.querySelectorAll('.bar-top')
     var barMids = document.querySelectorAll('.bar-mid')
     var barMidHidden = document.querySelectorAll('.bar-mid-hidden')

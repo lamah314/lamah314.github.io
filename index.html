@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/aboutMe.css">
     <link href="css/glider.css" rel="stylesheet" type="text/css">
     <script src="js/glider.js"></script>
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/cv.css">
     <script src="js/gliderLoader.js"></script>
@@ -169,8 +170,10 @@
                                                     class="blurryText symbols">;</span><br />
                                             </div>
                                             <figure id="myPhoto" class="grid-item grid-item-3">
-                                                <img src="images/my photo.jpg" alt="My photo">
-                                                <figcaption id="myPhoto__cap">Handsome</figcaption>
+                                                <a class="left-button">
+                                                    <img class="img-link" src="images/my photo.jpg" alt="My photo">
+                                                    <figcaption id="myPhoto__cap">Handsome</figcaption>
+                                                </a>
                                             </figure>
 
                                             <div class="grid-item grid-item-4">
@@ -561,6 +564,11 @@
             </div>
             <div class="cuboctahedron__face--square cuboctahedron__face--square-left">
                 <div class="container">
+                    <div id="myModal-img" class="modal__img">
+                        <span class="close">&times;</span>
+                        <img class="modal-content" id="modal-img">
+                        <div id="model-img-caption"></div>
+                    </div>
                     <header class="main-header">
                         <input class="main-header__title title--left-side front-button" type="button"
                             value="Anthony Lam">
@@ -691,7 +699,6 @@
                         </div>
                         <button class="glider-prev">&laquo;</button>
                         <button class="glider-next">&raquo;</button>
-
                     </main>
 
                     <footer class="force-footer">
@@ -1267,9 +1274,10 @@
             <li class="nav__list-item"><input class="dfr-button" type="button" value="DFR" /></li>
         </ul>
     </nav> -->
+
 </body>
 <script type="text/javascript" src="js/navMenu.js"></script>
 <script type="text/javascript" src="js/cuboctahedron.js"></script>
-
+<script type="text/javascript" src="js/modal.js"></script>
 
 </html>
