@@ -2,7 +2,7 @@ let navButton = document.querySelectorAll('.burger');
 
 for (let i = 0; i < navButton.length; i++) {
     navButton.item(i).addEventListener('click', () => {
-       burgerAnimation()
+        burgerAnimation()
     })
 }
 
@@ -41,6 +41,7 @@ function burgerOff() {
     offFlexVisibilityMulti(document.querySelectorAll('.nav'))
     offBurgernAnimationFront()
 }
+
 function offFlexVisibilityMulti(elements) {
     for (let i = 0; i < elements.length; i++) {
         elements.item(i).classList.remove('open-flex');
@@ -62,16 +63,7 @@ function offBurgernAnimationFront() {
 
 }
 
-
-
-
-
-
-
-
-
-    module.exports = {
-        toggleFlexVisibilityMulti: toggleFlexVisibilityMulti,
-        toggleFlexVisibilitySingle: toggleFlexVisibilitySingle
-    }
-
+module.exports = {
+    toggleFlexVisibilityMulti: toggleFlexVisibilityMulti,
+    toggleFlexVisibilitySingle: toggleFlexVisibilitySingle
+}

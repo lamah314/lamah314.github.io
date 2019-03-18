@@ -122,7 +122,7 @@
 }
 
 .glider-dot:hover, .glider-dot:focus, .glider-dot.active {
-    background: #a89cc8;
+    background: lime;
 }
 
 @media(max-width: 36em) {

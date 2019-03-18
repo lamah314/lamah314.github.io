@@ -1,0 +1,44 @@
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+.scene {
+    width: 500px;
+    height: 500px;
+    perspective: 1000px;
+    position:block;
+    margin: 0 auto;
+}
+
+.cuboctahedron {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    border: 5px solid fuchsia;
+
+}
+
+.cuboctahedron__face--cube {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    line-height: 250px;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+}
+
+.cuboctahedron__face--cube-front {
+    transform: rotateY(90deg) rotateX(90deg);
+    /* that there is 600 * sqrt(2) */
+    background-color: rgba(194, 5, 194, 0.5);
+}
+
+.cuboctahedron__face--cube-top {
+    transform: rotate3d(1,1,-1,180deg);
+    /* that there is 600 * sqrt(2) */
+    background-color: rgba(5, 194, 178, 0.548);
+}

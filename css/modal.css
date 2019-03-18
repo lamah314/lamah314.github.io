@@ -37,9 +37,9 @@
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
     max-width: 800px;
 }
+
 
 /* Caption of Modal Image */
 
@@ -56,7 +56,8 @@
 
 /* Add Animation */
 
-.modal-content, #model-img-caption {
+.modal-content,
+#model-img-caption {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -67,6 +68,7 @@
     from {
         -webkit-transform: scale(0)
     }
+
     to {
         -webkit-transform: scale(1)
     }
@@ -76,6 +78,7 @@
     from {
         transform: scale(0)
     }
+
     to {
         transform: scale(1)
     }
@@ -91,7 +94,8 @@
     transition: 0.3s;
 }
 
-.close:hover, .close:focus {
+.close:hover,
+.close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
